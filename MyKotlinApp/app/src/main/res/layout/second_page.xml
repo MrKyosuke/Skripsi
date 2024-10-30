@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Tesssssssssssssssssssssss -->
+
+    <!-- Untuk Question template sementara masih manually di input sesuai dengan story yang akan di-include -->
+    <TextView
+        android:id="@+id/question_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Where did Tim's dad went ?"
+        android:textSize="18sp"
+        android:padding="16dp"
+        android:textStyle="bold" />
+
+    <!-- Tiap Answer juga formatnya sama, akan tampil disaat session untuk quiz dan User tinggal menggunakan voice untuk memilih jawaban yang sudah di-list -->
+    <TextView
+        android:id="@+id/answer_a_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="A: Went to get some milk"
+        android:textSize="17sp" />
+
+    <TextView
+        android:id="@+id/answer_b_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="B: Went to the soup store"
+        android:textSize="17sp" />
+
+    <TextView
+        android:id="@+id/answer_c_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="C: Went to Your Moms house"
+        android:textSize="17sp" />
+
+    <Button
+        android:id="@+id/btn_voice_input"
+        android:layout_width="59dp"
+        android:layout_height="63dp"
+        android:layout_gravity="center"
+        android:background="@android:drawable/ic_btn_speak_now"
+        android:contentDescription="Voice Input Button" />
+
+    <TextView
+        android:id="@+id/feedback_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:text=""
+        android:textSize="16sp"
+        android:visibility="gone" />
+
+</LinearLayout>
