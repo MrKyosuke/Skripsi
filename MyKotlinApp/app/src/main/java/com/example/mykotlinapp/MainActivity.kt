@@ -59,7 +59,7 @@ class MainActivity : AppCompatActivity() ,View.OnClickListener {
         answerCTv = findViewById(R.id.answer_c_tv)
         btnVoiceInput = findViewById(R.id.btn_voice_input)
 
-        //Untuk declare VR (A)
+        //Untuk declare VR (A) -> Masih bisa ditest kembali, karena ada metode selain Google VA
         btn_button_a.setOnClickListener{
             textA = true
             val intent = Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH)
@@ -74,7 +74,7 @@ class MainActivity : AppCompatActivity() ,View.OnClickListener {
             }
         }
 
-        //(B)
+        //(B) -> Sama seperti yg A, Masih bisa ditest kembali, karena ada metode selain Google VA
         btn_button_b.setOnClickListener(){
             textA = false
             val intent = Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH)
