@@ -13,11 +13,10 @@ class Settings : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.settings_activity)
 
-        // Initialize Volume SeekBar
+        // Masih test terkait yg volumenya, nyoba" pakai metode ini
         val volumeSeekBar: SeekBar = findViewById(R.id.volume_seekbar)
         volumeSeekBar.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
             override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
-                // Update volume level
                 Toast.makeText(this@Settings, "Volume: $progress%", Toast.LENGTH_SHORT).show()
             }
 
@@ -25,15 +24,13 @@ class Settings : AppCompatActivity() {
             override fun onStopTrackingTouch(seekBar: SeekBar?) {}
         })
 
-        // Initialize BGM Switch
+        // BGM Switchnya seperti ini
         val bgmSwitch: Switch = findViewById(R.id.bgm_switch)
         bgmSwitch.setOnCheckedChangeListener { _, isChecked ->
             if (isChecked) {
                 Toast.makeText(this, "BGM Enabled", Toast.LENGTH_SHORT).show()
-                // Logic to enable BGM
             } else {
                 Toast.makeText(this, "BGM Disabled", Toast.LENGTH_SHORT).show()
-                // Logic to disable BGM
             }
         }
     }
