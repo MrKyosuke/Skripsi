@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">MyKotlinApp</string>
+    <string name="story_image">test</string>
 </resources>
