@@ -1,0 +1,18 @@
+Index: MyKotlinApp/local.properties
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>## This file must *NOT* be checked into Version Control Systems,\r\n# as it contains information specific to your local configuration.\r\n#\r\n# Location of the SDK. This is only used by Gradle.\r\n# For customization when using a Version Control System, please read the\r\n# header note.\r\n#Mon Nov 04 13:18:51 WIB 2024\r\nsdk.dir=C\\:\\\\Users\\\\Ken\\\\AppData\\\\Local\\\\Android\\\\Sdk\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>ISO-8859-1
+===================================================================
+diff --git a/MyKotlinApp/local.properties b/MyKotlinApp/local.properties
+--- a/MyKotlinApp/local.properties	(revision 21b5206d2dca99ce48d3c426964162af3d01b5da)
++++ b/MyKotlinApp/local.properties	(date 1740921979876)
+@@ -4,5 +4,5 @@
+ # Location of the SDK. This is only used by Gradle.
+ # For customization when using a Version Control System, please read the
+ # header note.
+-#Mon Nov 04 13:18:51 WIB 2024
+-sdk.dir=C\:\\Users\\Ken\\AppData\\Local\\Android\\Sdk
++#Sun Mar 02 20:26:19 WIB 2025
++sdk.dir=C\:\\Users\\Admin\\AppData\\Local\\Android\\Sdk

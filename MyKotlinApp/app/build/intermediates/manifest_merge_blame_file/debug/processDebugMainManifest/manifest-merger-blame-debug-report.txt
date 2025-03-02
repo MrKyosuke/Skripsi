@@ -1,0 +1,204 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.mykotlinapp"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="24"
+9        android:targetSdkVersion="34" />
+10
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->C:\Users\Admin\AndroidStudioProjects\Skripsi\MyKotlinApp\app\src\main\AndroidManifest.xml:5:5-66
+11-->C:\Users\Admin\AndroidStudioProjects\Skripsi\MyKotlinApp\app\src\main\AndroidManifest.xml:5:22-64
+12    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+12-->C:\Users\Admin\AndroidStudioProjects\Skripsi\MyKotlinApp\app\src\main\AndroidManifest.xml:6:5-70
+12-->C:\Users\Admin\AndroidStudioProjects\Skripsi\MyKotlinApp\app\src\main\AndroidManifest.xml:6:22-68
+13
+14    <permission
+14-->[androidx.core:core:1.13.1] C:\Users\Admin\.gradle\caches\transforms-4\484818fcbee3a161201dfd08c8126c62\transformed\core-1.13.1\AndroidManifest.xml:22:5-24:47
+15        android:name="com.example.mykotlinapp.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+15-->[androidx.core:core:1.13.1] C:\Users\Admin\.gradle\caches\transforms-4\484818fcbee3a161201dfd08c8126c62\transformed\core-1.13.1\AndroidManifest.xml:23:9-81
+16        android:protectionLevel="signature" />
+16-->[androidx.core:core:1.13.1] C:\Users\Admin\.gradle\caches\transforms-4\484818fcbee3a161201dfd08c8126c62\transformed\core-1.13.1\AndroidManifest.xml:24:9-44
+17
+18    <uses-permission android:name="com.example.mykotlinapp.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+18-->[androidx.core:core:1.13.1] C:\Users\Admin\.gradle\caches\transforms-4\484818fcbee3a161201dfd08c8126c62\transformed\core-1.13.1\AndroidManifest.xml:26:5-97
+18-->[androidx.core:core:1.13.1] C:\Users\Admin\.gradle\caches\transforms-4\484818fcbee3a161201dfd08c8126c62\transformed\core-1.13.1\AndroidManifest.xml:26:22-94
+19
+20    <application
+20-->C:\Users\Admin\AndroidStudioProjects\Skripsi\MyKotlinApp\app\src\main\AndroidManifest.xml:8:5-74:19
+21        android:allowBackup="true"
+21-->C:\Users\Admin\AndroidStudioProjects\Skripsi\MyKotlinApp\app\src\main\AndroidManifest.xml:9:9-35
+22        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+22-->[androidx.core:core:1.13.1] C:\Users\Admin\.gradle\caches\transforms-4\484818fcbee3a161201dfd08c8126c62\transformed\core-1.13.1\AndroidManifest.xml:28:18-86
+23        android:dataExtractionRules="@xml/data_extraction_rules"
+23-->C:\Users\Admin\AndroidStudioProjects\Skripsi\MyKotlinApp\app\src\main\AndroidManifest.xml:10:9-65
+24        android:debuggable="true"
+25        android:extractNativeLibs="false"
+26        android:fullBackupContent="@xml/backup_rules"
+26-->C:\Users\Admin\AndroidStudioProjects\Skripsi\MyKotlinApp\app\src\main\AndroidManifest.xml:11:9-54
+27        android:icon="@mipmap/ic_launcher"
+27-->C:\Users\Admin\AndroidStudioProjects\Skripsi\MyKotlinApp\app\src\main\AndroidManifest.xml:12:9-43
+28        android:label="@string/app_name"
+28-->C:\Users\Admin\AndroidStudioProjects\Skripsi\MyKotlinApp\app\src\main\AndroidManifest.xml:13:9-41
+29        android:roundIcon="@mipmap/ic_launcher_round"
+29-->C:\Users\Admin\AndroidStudioProjects\Skripsi\MyKotlinApp\app\src\main\AndroidManifest.xml:14:9-54
+30        android:supportsRtl="true"
+30-->C:\Users\Admin\AndroidStudioProjects\Skripsi\MyKotlinApp\app\src\main\AndroidManifest.xml:15:9-35
+31        android:testOnly="true"
+32        android:theme="@style/Theme.MyKotlinApp" >
+32-->C:\Users\Admin\AndroidStudioProjects\Skripsi\MyKotlinApp\app\src\main\AndroidManifest.xml:16:9-49
+33        <activity
+33-->C:\Users\Admin\AndroidStudioProjects\Skripsi\MyKotlinApp\app\src\main\AndroidManifest.xml:18:9-22:20
+34            android:name="com.example.mykotlinapp.Quiz"
+34-->C:\Users\Admin\AndroidStudioProjects\Skripsi\MyKotlinApp\app\src\main\AndroidManifest.xml:19:13-33
+35            android:exported="true" >
+35-->C:\Users\Admin\AndroidStudioProjects\Skripsi\MyKotlinApp\app\src\main\AndroidManifest.xml:20:13-36
+36        </activity>
+37        <activity
+37-->C:\Users\Admin\AndroidStudioProjects\Skripsi\MyKotlinApp\app\src\main\AndroidManifest.xml:24:9-32:20
+38            android:name="com.example.mykotlinapp.Dashboard"
+38-->C:\Users\Admin\AndroidStudioProjects\Skripsi\MyKotlinApp\app\src\main\AndroidManifest.xml:25:13-38
+39            android:exported="true" >
+39-->C:\Users\Admin\AndroidStudioProjects\Skripsi\MyKotlinApp\app\src\main\AndroidManifest.xml:26:13-36
+40            <intent-filter>
+40-->C:\Users\Admin\AndroidStudioProjects\Skripsi\MyKotlinApp\app\src\main\AndroidManifest.xml:27:13-31:29
+41                <action android:name="android.intent.action.MAIN" />
+41-->C:\Users\Admin\AndroidStudioProjects\Skripsi\MyKotlinApp\app\src\main\AndroidManifest.xml:28:17-69
+41-->C:\Users\Admin\AndroidStudioProjects\Skripsi\MyKotlinApp\app\src\main\AndroidManifest.xml:28:25-66
+42
+43                <category android:name="android.intent.category.LAUNCHER" />
+43-->C:\Users\Admin\AndroidStudioProjects\Skripsi\MyKotlinApp\app\src\main\AndroidManifest.xml:30:17-77
+43-->C:\Users\Admin\AndroidStudioProjects\Skripsi\MyKotlinApp\app\src\main\AndroidManifest.xml:30:27-74
+44            </intent-filter>
+45        </activity>
+46        <activity
+46-->C:\Users\Admin\AndroidStudioProjects\Skripsi\MyKotlinApp\app\src\main\AndroidManifest.xml:34:9-36:38
+47            android:name="com.example.mykotlinapp.SecondActivity"
+47-->C:\Users\Admin\AndroidStudioProjects\Skripsi\MyKotlinApp\app\src\main\AndroidManifest.xml:35:13-43
+48            android:exported="true" />
+48-->C:\Users\Admin\AndroidStudioProjects\Skripsi\MyKotlinApp\app\src\main\AndroidManifest.xml:36:13-36
+49        <activity
+49-->C:\Users\Admin\AndroidStudioProjects\Skripsi\MyKotlinApp\app\src\main\AndroidManifest.xml:38:9-40:38
+50            android:name="com.example.mykotlinapp.Level"
+50-->C:\Users\Admin\AndroidStudioProjects\Skripsi\MyKotlinApp\app\src\main\AndroidManifest.xml:39:13-34
+51            android:exported="true" />
+51-->C:\Users\Admin\AndroidStudioProjects\Skripsi\MyKotlinApp\app\src\main\AndroidManifest.xml:40:13-36
+52        <activity
+52-->C:\Users\Admin\AndroidStudioProjects\Skripsi\MyKotlinApp\app\src\main\AndroidManifest.xml:42:9-44:38
+53            android:name="com.example.mykotlinapp.Settings"
+53-->C:\Users\Admin\AndroidStudioProjects\Skripsi\MyKotlinApp\app\src\main\AndroidManifest.xml:43:13-37
+54            android:exported="true" />
+54-->C:\Users\Admin\AndroidStudioProjects\Skripsi\MyKotlinApp\app\src\main\AndroidManifest.xml:44:13-36
+55        <activity
+55-->C:\Users\Admin\AndroidStudioProjects\Skripsi\MyKotlinApp\app\src\main\AndroidManifest.xml:46:9-48:38
+56            android:name="com.example.mykotlinapp.About"
+56-->C:\Users\Admin\AndroidStudioProjects\Skripsi\MyKotlinApp\app\src\main\AndroidManifest.xml:47:13-34
+57            android:exported="true" />
+57-->C:\Users\Admin\AndroidStudioProjects\Skripsi\MyKotlinApp\app\src\main\AndroidManifest.xml:48:13-36
+58        <activity
+58-->C:\Users\Admin\AndroidStudioProjects\Skripsi\MyKotlinApp\app\src\main\AndroidManifest.xml:50:9-52:38
+59            android:name="com.example.mykotlinapp.EasyLevel"
+59-->C:\Users\Admin\AndroidStudioProjects\Skripsi\MyKotlinApp\app\src\main\AndroidManifest.xml:51:13-38
+60            android:exported="true" />
+60-->C:\Users\Admin\AndroidStudioProjects\Skripsi\MyKotlinApp\app\src\main\AndroidManifest.xml:52:13-36
+61        <activity
+61-->C:\Users\Admin\AndroidStudioProjects\Skripsi\MyKotlinApp\app\src\main\AndroidManifest.xml:54:9-56:38
+62            android:name="com.example.mykotlinapp.MediumLevel"
+62-->C:\Users\Admin\AndroidStudioProjects\Skripsi\MyKotlinApp\app\src\main\AndroidManifest.xml:55:13-40
+63            android:exported="true" />
+63-->C:\Users\Admin\AndroidStudioProjects\Skripsi\MyKotlinApp\app\src\main\AndroidManifest.xml:56:13-36
+64        <activity
+64-->C:\Users\Admin\AndroidStudioProjects\Skripsi\MyKotlinApp\app\src\main\AndroidManifest.xml:58:9-60:38
+65            android:name="com.example.mykotlinapp.HardLevel"
+65-->C:\Users\Admin\AndroidStudioProjects\Skripsi\MyKotlinApp\app\src\main\AndroidManifest.xml:59:13-38
+66            android:exported="true" />
+66-->C:\Users\Admin\AndroidStudioProjects\Skripsi\MyKotlinApp\app\src\main\AndroidManifest.xml:60:13-36
+67        <activity
+67-->C:\Users\Admin\AndroidStudioProjects\Skripsi\MyKotlinApp\app\src\main\AndroidManifest.xml:62:9-64:38
+68            android:name="com.example.mykotlinapp.Turtle_Story"
+68-->C:\Users\Admin\AndroidStudioProjects\Skripsi\MyKotlinApp\app\src\main\AndroidManifest.xml:63:13-41
+69            android:exported="true" />
+69-->C:\Users\Admin\AndroidStudioProjects\Skripsi\MyKotlinApp\app\src\main\AndroidManifest.xml:64:13-36
+70        <activity
+70-->C:\Users\Admin\AndroidStudioProjects\Skripsi\MyKotlinApp\app\src\main\AndroidManifest.xml:66:9-68:38
+71            android:name="com.example.mykotlinapp.Shepherd_Story"
+71-->C:\Users\Admin\AndroidStudioProjects\Skripsi\MyKotlinApp\app\src\main\AndroidManifest.xml:67:13-43
+72            android:exported="true" />
+72-->C:\Users\Admin\AndroidStudioProjects\Skripsi\MyKotlinApp\app\src\main\AndroidManifest.xml:68:13-36
+73        <activity
+73-->C:\Users\Admin\AndroidStudioProjects\Skripsi\MyKotlinApp\app\src\main\AndroidManifest.xml:70:9-72:38
+74            android:name="com.example.mykotlinapp.Elephant_Story"
+74-->C:\Users\Admin\AndroidStudioProjects\Skripsi\MyKotlinApp\app\src\main\AndroidManifest.xml:71:13-43
+75            android:exported="true" />
+75-->C:\Users\Admin\AndroidStudioProjects\Skripsi\MyKotlinApp\app\src\main\AndroidManifest.xml:72:13-36
+76
+77        <provider
+77-->[androidx.emoji2:emoji2:1.3.0] C:\Users\Admin\.gradle\caches\transforms-4\74bd9cf20b26d162f0ae4fcf7a147ad5\transformed\emoji2-1.3.0\AndroidManifest.xml:24:9-32:20
+78            android:name="androidx.startup.InitializationProvider"
+78-->[androidx.emoji2:emoji2:1.3.0] C:\Users\Admin\.gradle\caches\transforms-4\74bd9cf20b26d162f0ae4fcf7a147ad5\transformed\emoji2-1.3.0\AndroidManifest.xml:25:13-67
+79            android:authorities="com.example.mykotlinapp.androidx-startup"
+79-->[androidx.emoji2:emoji2:1.3.0] C:\Users\Admin\.gradle\caches\transforms-4\74bd9cf20b26d162f0ae4fcf7a147ad5\transformed\emoji2-1.3.0\AndroidManifest.xml:26:13-68
+80            android:exported="false" >
+80-->[androidx.emoji2:emoji2:1.3.0] C:\Users\Admin\.gradle\caches\transforms-4\74bd9cf20b26d162f0ae4fcf7a147ad5\transformed\emoji2-1.3.0\AndroidManifest.xml:27:13-37
+81            <meta-data
+81-->[androidx.emoji2:emoji2:1.3.0] C:\Users\Admin\.gradle\caches\transforms-4\74bd9cf20b26d162f0ae4fcf7a147ad5\transformed\emoji2-1.3.0\AndroidManifest.xml:29:13-31:52
+82                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+82-->[androidx.emoji2:emoji2:1.3.0] C:\Users\Admin\.gradle\caches\transforms-4\74bd9cf20b26d162f0ae4fcf7a147ad5\transformed\emoji2-1.3.0\AndroidManifest.xml:30:17-75
+83                android:value="androidx.startup" />
+83-->[androidx.emoji2:emoji2:1.3.0] C:\Users\Admin\.gradle\caches\transforms-4\74bd9cf20b26d162f0ae4fcf7a147ad5\transformed\emoji2-1.3.0\AndroidManifest.xml:31:17-49
+84            <meta-data
+84-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\Admin\.gradle\caches\transforms-4\662d3f93eb4bbebd8678925f0b533e53\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:29:13-31:52
+85                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+85-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\Admin\.gradle\caches\transforms-4\662d3f93eb4bbebd8678925f0b533e53\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:30:17-78
+86                android:value="androidx.startup" />
+86-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\Admin\.gradle\caches\transforms-4\662d3f93eb4bbebd8678925f0b533e53\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:31:17-49
+87            <meta-data
+87-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Admin\.gradle\caches\transforms-4\f05ba5de565275d57287da92a119fef7\transformed\profileinstaller-1.3.1\AndroidManifest.xml:29:13-31:52
+88                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+88-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Admin\.gradle\caches\transforms-4\f05ba5de565275d57287da92a119fef7\transformed\profileinstaller-1.3.1\AndroidManifest.xml:30:17-85
+89                android:value="androidx.startup" />
+89-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Admin\.gradle\caches\transforms-4\f05ba5de565275d57287da92a119fef7\transformed\profileinstaller-1.3.1\AndroidManifest.xml:31:17-49
+90        </provider>
+91
+92        <receiver
+92-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Admin\.gradle\caches\transforms-4\f05ba5de565275d57287da92a119fef7\transformed\profileinstaller-1.3.1\AndroidManifest.xml:34:9-52:20
+93            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+93-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Admin\.gradle\caches\transforms-4\f05ba5de565275d57287da92a119fef7\transformed\profileinstaller-1.3.1\AndroidManifest.xml:35:13-76
+94            android:directBootAware="false"
+94-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Admin\.gradle\caches\transforms-4\f05ba5de565275d57287da92a119fef7\transformed\profileinstaller-1.3.1\AndroidManifest.xml:36:13-44
+95            android:enabled="true"
+95-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Admin\.gradle\caches\transforms-4\f05ba5de565275d57287da92a119fef7\transformed\profileinstaller-1.3.1\AndroidManifest.xml:37:13-35
+96            android:exported="true"
+96-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Admin\.gradle\caches\transforms-4\f05ba5de565275d57287da92a119fef7\transformed\profileinstaller-1.3.1\AndroidManifest.xml:38:13-36
+97            android:permission="android.permission.DUMP" >
+97-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Admin\.gradle\caches\transforms-4\f05ba5de565275d57287da92a119fef7\transformed\profileinstaller-1.3.1\AndroidManifest.xml:39:13-57
+98            <intent-filter>
+98-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Admin\.gradle\caches\transforms-4\f05ba5de565275d57287da92a119fef7\transformed\profileinstaller-1.3.1\AndroidManifest.xml:40:13-42:29
+99                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+99-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Admin\.gradle\caches\transforms-4\f05ba5de565275d57287da92a119fef7\transformed\profileinstaller-1.3.1\AndroidManifest.xml:41:17-91
+99-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Admin\.gradle\caches\transforms-4\f05ba5de565275d57287da92a119fef7\transformed\profileinstaller-1.3.1\AndroidManifest.xml:41:25-88
+100            </intent-filter>
+101            <intent-filter>
+101-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Admin\.gradle\caches\transforms-4\f05ba5de565275d57287da92a119fef7\transformed\profileinstaller-1.3.1\AndroidManifest.xml:43:13-45:29
+102                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+102-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Admin\.gradle\caches\transforms-4\f05ba5de565275d57287da92a119fef7\transformed\profileinstaller-1.3.1\AndroidManifest.xml:44:17-85
+102-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Admin\.gradle\caches\transforms-4\f05ba5de565275d57287da92a119fef7\transformed\profileinstaller-1.3.1\AndroidManifest.xml:44:25-82
+103            </intent-filter>
+104            <intent-filter>
+104-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Admin\.gradle\caches\transforms-4\f05ba5de565275d57287da92a119fef7\transformed\profileinstaller-1.3.1\AndroidManifest.xml:46:13-48:29
+105                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+105-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Admin\.gradle\caches\transforms-4\f05ba5de565275d57287da92a119fef7\transformed\profileinstaller-1.3.1\AndroidManifest.xml:47:17-88
+105-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Admin\.gradle\caches\transforms-4\f05ba5de565275d57287da92a119fef7\transformed\profileinstaller-1.3.1\AndroidManifest.xml:47:25-85
+106            </intent-filter>
+107            <intent-filter>
+107-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Admin\.gradle\caches\transforms-4\f05ba5de565275d57287da92a119fef7\transformed\profileinstaller-1.3.1\AndroidManifest.xml:49:13-51:29
+108                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+108-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Admin\.gradle\caches\transforms-4\f05ba5de565275d57287da92a119fef7\transformed\profileinstaller-1.3.1\AndroidManifest.xml:50:17-95
+108-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Admin\.gradle\caches\transforms-4\f05ba5de565275d57287da92a119fef7\transformed\profileinstaller-1.3.1\AndroidManifest.xml:50:25-92
+109            </intent-filter>
+110        </receiver>
+111    </application>
+112
+113</manifest>

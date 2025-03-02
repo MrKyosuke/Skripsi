@@ -1,0 +1,282 @@
+[
+    {
+        "merged": "com.example.mykotlinapp-debug-31:/layout_settings_activity.xml.flat",
+        "source": "com.example.mykotlinapp-main-33:/layout/settings_activity.xml"
+    },
+    {
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.7\\com.example.mykotlinapp-debug-31:\\xml_data_extraction_rules.xml.flat",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.7\\com.example.mykotlinapp-main-33:\\xml\\data_extraction_rules.xml"
+    },
+    {
+        "merged": "com.example.mykotlinapp-debug-31:/drawable_elephant_revenge.png.flat",
+        "source": "com.example.mykotlinapp-main-33:/drawable/elephant_revenge.png"
+    },
+    {
+        "merged": "com.example.mykotlinapp-debug-31:/drawable_back_button_red.png.flat",
+        "source": "com.example.mykotlinapp-main-33:/drawable/back_button_red.png"
+    },
+    {
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.7\\com.example.mykotlinapp-debug-31:\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.7\\com.example.mykotlinapp-main-33:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "com.example.mykotlinapp-debug-31:/drawable_rabbit_race.jpg.flat",
+        "source": "com.example.mykotlinapp-main-33:/drawable/rabbit_race.jpg"
+    },
+    {
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.7\\com.example.mykotlinapp-debug-31:\\drawable_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.7\\com.example.mykotlinapp-main-33:\\drawable\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "com.example.mykotlinapp-debug-31:/drawable_ic_settings.xml.flat",
+        "source": "com.example.mykotlinapp-main-33:/drawable/ic_settings.xml"
+    },
+    {
+        "merged": "com.example.mykotlinapp-debug-31:/drawable_elephant_shoots_water.png.flat",
+        "source": "com.example.mykotlinapp-main-33:/drawable/elephant_shoots_water.png"
+    },
+    {
+        "merged": "com.example.mykotlinapp-debug-31:/mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "com.example.mykotlinapp-main-33:/mipmap-mdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.mykotlinapp-debug-31:/layout_about_activity.xml.flat",
+        "source": "com.example.mykotlinapp-main-33:/layout/about_activity.xml"
+    },
+    {
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.7\\com.example.mykotlinapp-debug-31:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.7\\com.example.mykotlinapp-main-33:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.mykotlinapp-debug-31:/drawable_question_card_bg.xml.flat",
+        "source": "com.example.mykotlinapp-main-33:/drawable/question_card_bg.xml"
+    },
+    {
+        "merged": "com.example.mykotlinapp-debug-31:/layout_activity_main.xml.flat",
+        "source": "com.example.mykotlinapp-main-33:/layout/activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.7\\com.example.mykotlinapp-debug-31:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.7\\com.example.mykotlinapp-main-33:\\mipmap-xxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.7\\com.example.mykotlinapp-debug-31:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.7\\com.example.mykotlinapp-main-33:\\mipmap-anydpi-v26\\ic_launcher.xml"
+    },
+    {
+        "merged": "com.example.mykotlinapp-debug-31:/drawable_ic_back_arrow.xml.flat",
+        "source": "com.example.mykotlinapp-main-33:/drawable/ic_back_arrow.xml"
+    },
+    {
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.7\\com.example.mykotlinapp-debug-31:\\mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.7\\com.example.mykotlinapp-main-33:\\mipmap-xhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.mykotlinapp-debug-31:/mipmap-xxhdpi_ic_first_story.webp.flat",
+        "source": "com.example.mykotlinapp-main-33:/mipmap-xxhdpi/ic_first_story.webp"
+    },
+    {
+        "merged": "com.example.mykotlinapp-debug-31:/drawable_ic_levels.xml.flat",
+        "source": "com.example.mykotlinapp-main-33:/drawable/ic_levels.xml"
+    },
+    {
+        "merged": "com.example.mykotlinapp-debug-31:/drawable_turtle_rabbit.png.flat",
+        "source": "com.example.mykotlinapp-main-33:/drawable/turtle_rabbit.png"
+    },
+    {
+        "merged": "com.example.mykotlinapp-debug-31:/mipmap-xhdpi_ic_first_story.webp.flat",
+        "source": "com.example.mykotlinapp-main-33:/mipmap-xhdpi/ic_first_story.webp"
+    },
+    {
+        "merged": "com.example.mykotlinapp-debug-31:/layout_quiz_activity.xml.flat",
+        "source": "com.example.mykotlinapp-main-33:/layout/quiz_activity.xml"
+    },
+    {
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.7\\com.example.mykotlinapp-debug-31:\\xml_backup_rules.xml.flat",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.7\\com.example.mykotlinapp-main-33:\\xml\\backup_rules.xml"
+    },
+    {
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.7\\com.example.mykotlinapp-debug-31:\\mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.7\\com.example.mykotlinapp-main-33:\\mipmap-xxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.mykotlinapp-debug-31:/drawable_rabbit_lost.jpg.flat",
+        "source": "com.example.mykotlinapp-main-33:/drawable/rabbit_lost.jpg"
+    },
+    {
+        "merged": "com.example.mykotlinapp-debug-31:/layout_dashboard.xml.flat",
+        "source": "com.example.mykotlinapp-main-33:/layout/dashboard.xml"
+    },
+    {
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.7\\com.example.mykotlinapp-debug-31:\\mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.7\\com.example.mykotlinapp-main-33:\\mipmap-hdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.mykotlinapp-debug-31:/layout_activity_medium_level.xml.flat",
+        "source": "com.example.mykotlinapp-main-33:/layout/activity_medium_level.xml"
+    },
+    {
+        "merged": "com.example.mykotlinapp-debug-31:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.example.mykotlinapp-main-33:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "com.example.mykotlinapp-debug-31:/mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "com.example.mykotlinapp-main-33:/mipmap-hdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.mykotlinapp-debug-31:/drawable_sheep_test.png.flat",
+        "source": "com.example.mykotlinapp-main-33:/drawable/sheep_test.png"
+    },
+    {
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.7\\com.example.mykotlinapp-debug-31:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.7\\com.example.mykotlinapp-main-33:\\mipmap-xxxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.mykotlinapp-debug-31:/drawable_about.xml.flat",
+        "source": "com.example.mykotlinapp-main-33:/drawable/about.xml"
+    },
+    {
+        "merged": "com.example.mykotlinapp-debug-31:/layout_quiz_activity_easy.xml.flat",
+        "source": "com.example.mykotlinapp-main-33:/layout/quiz_activity_easy.xml"
+    },
+    {
+        "merged": "com.example.mykotlinapp-debug-31:/layout_activity_easy_level.xml.flat",
+        "source": "com.example.mykotlinapp-main-33:/layout/activity_easy_level.xml"
+    },
+    {
+        "merged": "com.example.mykotlinapp-debug-31:/drawable_shepherd_field.png.flat",
+        "source": "com.example.mykotlinapp-main-33:/drawable/shepherd_field.png"
+    },
+    {
+        "merged": "com.example.mykotlinapp-debug-31:/drawable_rabbit_sleep.jpg.flat",
+        "source": "com.example.mykotlinapp-main-33:/drawable/rabbit_sleep.jpg"
+    },
+    {
+        "merged": "com.example.mykotlinapp-debug-31:/mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.mykotlinapp-main-33:/mipmap-hdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.mykotlinapp-debug-31:/mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "com.example.mykotlinapp-main-33:/mipmap-xhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.mykotlinapp-debug-31:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.mykotlinapp-main-33:/mipmap-xxxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.7\\com.example.mykotlinapp-debug-31:\\mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.7\\com.example.mykotlinapp-main-33:\\mipmap-mdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.mykotlinapp-debug-31:/drawable_elephant_sees_ant.png.flat",
+        "source": "com.example.mykotlinapp-main-33:/drawable/elephant_sees_ant.png"
+    },
+    {
+        "merged": "com.example.mykotlinapp-debug-31:/drawable_the_elephant_and_the_ant.png.flat",
+        "source": "com.example.mykotlinapp-main-33:/drawable/the_elephant_and_the_ant.png"
+    },
+    {
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.7\\com.example.mykotlinapp-debug-31:\\mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.7\\com.example.mykotlinapp-main-33:\\mipmap-mdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.mykotlinapp-debug-31:/mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "com.example.mykotlinapp-main-33:/mipmap-xxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.mykotlinapp-debug-31:/layout_second_page.xml.flat",
+        "source": "com.example.mykotlinapp-main-33:/layout/second_page.xml"
+    },
+    {
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.7\\com.example.mykotlinapp-debug-31:\\mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.7\\com.example.mykotlinapp-main-33:\\mipmap-hdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.mykotlinapp-debug-31:/layout_fragment_story.xml.flat",
+        "source": "com.example.mykotlinapp-main-33:/layout/fragment_story.xml"
+    },
+    {
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.7\\com.example.mykotlinapp-debug-31:\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.7\\com.example.mykotlinapp-main-33:\\drawable\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.7\\com.example.mykotlinapp-debug-31:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.7\\com.example.mykotlinapp-main-33:\\mipmap-xhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.mykotlinapp-debug-31:/drawable_ic_launcher_background.xml.flat",
+        "source": "com.example.mykotlinapp-main-33:/drawable/ic_launcher_background.xml"
+    },
+    {
+        "merged": "com.example.mykotlinapp-debug-31:/drawable_fox_story.png.flat",
+        "source": "com.example.mykotlinapp-main-33:/drawable/fox_story.png"
+    },
+    {
+        "merged": "com.example.mykotlinapp-debug-31:/drawable_ic_home.xml.flat",
+        "source": "com.example.mykotlinapp-main-33:/drawable/ic_home.xml"
+    },
+    {
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.7\\com.example.mykotlinapp-debug-31:\\layout_second_page.xml.flat",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.7\\com.example.mykotlinapp-main-33:\\layout\\second_page.xml"
+    },
+    {
+        "merged": "com.example.mykotlinapp-debug-31:/mipmap-mdpi_ic_first_story.webp.flat",
+        "source": "com.example.mykotlinapp-main-33:/mipmap-mdpi/ic_first_story.webp"
+    },
+    {
+        "merged": "com.example.mykotlinapp-debug-31:/mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "com.example.mykotlinapp-main-33:/mipmap-xxxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.mykotlinapp-debug-31:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "com.example.mykotlinapp-main-33:/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "com.example.mykotlinapp-debug-31:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.mykotlinapp-main-33:/mipmap-xxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.mykotlinapp-debug-31:/mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.mykotlinapp-main-33:/mipmap-mdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.mykotlinapp-debug-31:/layout_level_activity.xml.flat",
+        "source": "com.example.mykotlinapp-main-33:/layout/level_activity.xml"
+    },
+    {
+        "merged": "com.example.mykotlinapp-debug-31:/mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.mykotlinapp-main-33:/mipmap-xhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.mykotlinapp-debug-31:/drawable_bg_view.xml.flat",
+        "source": "com.example.mykotlinapp-main-33:/drawable/bg_view.xml"
+    },
+    {
+        "merged": "com.example.mykotlinapp-debug-31:/mipmap-hdpi_ic_first_story.webp.flat",
+        "source": "com.example.mykotlinapp-main-33:/mipmap-hdpi/ic_first_story.webp"
+    },
+    {
+        "merged": "com.example.mykotlinapp-debug-31:/layout_activity_hard_level.xml.flat",
+        "source": "com.example.mykotlinapp-main-33:/layout/activity_hard_level.xml"
+    },
+    {
+        "merged": "com.example.mykotlinapp-debug-31:/mipmap-xxxhdpi_ic_first_story.webp.flat",
+        "source": "com.example.mykotlinapp-main-33:/mipmap-xxxhdpi/ic_first_story.webp"
+    },
+    {
+        "merged": "com.example.mykotlinapp-debug-31:/drawable_elephant_apologize.png.flat",
+        "source": "com.example.mykotlinapp-main-33:/drawable/elephant_apologize.png"
+    },
+    {
+        "merged": "com.example.mykotlinapp-debug-31:/drawable_rabbit_met.jpg.flat",
+        "source": "com.example.mykotlinapp-main-33:/drawable/rabbit_met.jpg"
+    },
+    {
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.7\\com.example.mykotlinapp-debug-31:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.7\\com.example.mykotlinapp-main-33:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "com.example.mykotlinapp-debug-31:/drawable_answer_button_bg.xml.flat",
+        "source": "com.example.mykotlinapp-main-33:/drawable/answer_button_bg.xml"
+    }
+]
