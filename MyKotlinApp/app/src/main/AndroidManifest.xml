@@ -67,6 +67,18 @@
             android:name=".Shepherd_Story"
             android:exported="true"/>
 
+        <activity
+            android:name=".Elephant_Story"
+            android:exported="true"/>
+
+        <activity
+            android:name=".WrongAnswer"
+            android:exported="true"/>
+
+        <activity
+            android:name=".Bawang_Merah"
+            android:exported="true"/>
+
     </application>
 
 </manifest>

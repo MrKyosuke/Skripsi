@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="16dp">
+
+    <!-- Image representing the incorrect answer -->
+    <ImageView
+        android:id="@+id/wrongAnswerImageView"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:scaleType="fitCenter" />
+
+    <!-- Explanation TextView -->
+    <TextView
+        android:id="@+id/explanationTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Explanation of why this answer is incorrect."
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:padding="12dp" />
+
+    <!-- Additional details about the incorrect answer -->
+    <TextView
+        android:id="@+id/descriptionTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="More details on why the answer was wrong."
+        android:textSize="16sp"
+        android:gravity="center"
+        android:padding="8dp" />
+
+    <!-- Button to return to quiz -->
+    <Button
+        android:id="@+id/backButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Back to Quiz"
+        android:padding="10dp"
+        android:layout_marginTop="16dp" />
+
+</LinearLayout>

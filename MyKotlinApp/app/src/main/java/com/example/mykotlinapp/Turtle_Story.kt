@@ -25,7 +25,7 @@ class Turtle_Story : AppCompatActivity() {
         val adapter = StoryPagerAdapter(this, storySegments)
         viewPager.adapter = adapter
 
-        // Add a listener to detect when the user reaches the last page
+        // untuk detect listener
         viewPager.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
             override fun onPageSelected(position: Int) {
                 super.onPageSelected(position)
@@ -39,7 +39,7 @@ class Turtle_Story : AppCompatActivity() {
                         intent.putExtra("story_id", "turtle_story")  // Pass the story id to the quiz
                         startActivity(intent)
                         finish() // Close the story activity
-                    }, 1000) // 1-second delay for better UX
+                    }, 10000) // 1-second delay for better UX
                 }
             }
         })
