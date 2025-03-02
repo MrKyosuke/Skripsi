@@ -10,6 +10,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import android.view.View
 
 class Quiz : AppCompatActivity() {
 
@@ -58,18 +59,28 @@ class Quiz : AppCompatActivity() {
         val currentQuestion = quizData.questions.getOrNull(currentQuestionIndex)
         currentQuestion?.let {
             questionTv.text = it.question
-            answerATv.text = it.answers[0]
-            answerBTv.text = it.answers[1]
-            answerCTv.text = it.answers[2]
-            answerDTv.text = it.answers[3]
             storyImage.setImageResource(it.imageResId)
+
+            val answers = it.answers
+
+            answerATv.text = answers.getOrNull(0) ?: ""
+            answerBTv.text = answers.getOrNull(1) ?: ""
+            answerCTv.text = answers.getOrNull(2) ?: ""
+            answerDTv.text = answers.getOrNull(3) ?: ""
+
+            // Hide answer text views if there are fewer options
+            answerCTv.visibility = if (answers.size > 2) View.VISIBLE else View.GONE
+            answerDTv.visibility = if (answers.size > 3) View.VISIBLE else View.GONE
         }
     }
 
     // seperti yg versi sebelumnya, bakal pakai speech pop up google, tapi bisa diubah messagenya
     private fun promptForSpeech() {
         val intent = Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH)
-        intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL, RecognizerIntent.LANGUAGE_MODEL_FREE_FORM)
+        intent.putExtra(
+            RecognizerIntent.EXTRA_LANGUAGE_MODEL,
+            RecognizerIntent.LANGUAGE_MODEL_FREE_FORM
+        )
         intent.putExtra(RecognizerIntent.EXTRA_PROMPT, "Say your answer !")
         //untuk activityforresultnya msh g tau bisa jalan terus tanpa issue atau tidak jadi mungkin bisa di-research kembali kalau ada metode yg bsa dipakai untuk fix atau ada metode lebih baik
         startActivityForResult(intent, REQ_CODE_SPEECH_INPUT)
@@ -89,26 +100,37 @@ class Quiz : AppCompatActivity() {
     //
     private fun checkAnswer(spokenText: String) {
         val currentQuestion = quizData.questions.getOrNull(currentQuestionIndex) ?: return
-        val answers = currentQuestion.answers.map { it.toLowerCase() }
+        val answers = currentQuestion.answers.map { it.lowercase() }
 
-        // logika untuk match answer dari sini
         val correctAnswerIndex = currentQuestion.correctAnswerIndex
         if (spokenText.contains(answers[correctAnswerIndex])) {
-            Toast.makeText(this, "Nice One !", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Nice One!", Toast.LENGTH_SHORT).show()
             proceedToNextQuestion()
         } else {
-            Toast.makeText(this, "That's wrong, Try Again !", Toast.LENGTH_SHORT).show()
+            val wrongAnswerData = WrongAnswerRepository.getWrongAnswer(
+                storyId = intent.getStringExtra("story_id") ?: "",
+                questionIndex = currentQuestionIndex,
+                selectedAnswer = spokenText
+            )
+
+            wrongAnswerData?.let { data ->
+                val intent = Intent(this, WrongAnswer::class.java).apply {
+                    putExtra("explanation", data.explanation)
+                    putExtra("imageResId", data.imageResId)
+                    putExtra("description", data.description)
+                }
+                startActivity(intent)
+            }
         }
     }
 
+    // ✅ Now it's outside `checkAnswer()` and can be accessed globally in the class
     private fun proceedToNextQuestion() {
         currentQuestionIndex++
 
-        // masih testing, tapi kalau misalkan ada question yang bakal di load lagi, bakal di load langsung pakai metode ini
         if (currentQuestionIndex < quizData.questions.size) {
             loadCurrentQuestion()
         } else {
-            // kalo progressnya dah selesai bakal gunain pop up untuk indikasi completion dari storynya
             Toast.makeText(this, "Story Completed !", Toast.LENGTH_LONG).show()
             finish()
         }

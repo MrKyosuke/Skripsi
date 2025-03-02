@@ -4,11 +4,18 @@ data class QuizData(
     val questions: List<QuizQuestion>
 )
 
-//tipe data dari tiap object di storynya
 data class QuizQuestion(
-    val imageResId: Int,
     val question: String,
+    val imageResId: Int,
     val answers: List<String>,
-    val correctAnswerIndex: Int
+    val correctAnswerIndex: Int,
+    val answerImageRes: List<Int>? = null,
+    val explanations: List<String>
 )
+
+
+
+
+
+
 
