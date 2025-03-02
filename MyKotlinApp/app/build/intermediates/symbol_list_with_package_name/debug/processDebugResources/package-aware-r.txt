@@ -2993,6 +2993,7 @@ drawable answer_button_bg
 drawable avd_hide_password
 drawable avd_show_password
 drawable back_button_red
+drawable bawang_story
 drawable bg_view
 drawable btn_checkbox_checked_mtrl
 drawable btn_checkbox_checked_to_unchecked_mtrl_animation
@@ -3011,6 +3012,7 @@ drawable elephant_apologize
 drawable elephant_revenge
 drawable elephant_sees_ant
 drawable elephant_shoots_water
+drawable false_pumpkin
 drawable fox_story
 drawable ic_arrow_back_black_24
 drawable ic_back_arrow
@@ -3036,7 +3038,9 @@ drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
 drawable ic_search_black_24
 drawable ic_settings
+drawable incident
 drawable indeterminate_static
+drawable lost_shawl
 drawable m3_avd_hide_password
 drawable m3_avd_show_password
 drawable m3_bottom_sheet_drag_handle
@@ -3109,6 +3113,8 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
+drawable pumpkin_gift
+drawable punishment
 drawable question_card_bg
 drawable rabbit_lost
 drawable rabbit_met
@@ -3120,7 +3126,9 @@ drawable test_level_drawable
 drawable the_elephant_and_the_ant
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
+drawable treasure
 drawable turtle_rabbit
+drawable village_scene
 id ALT
 id BOTTOM_END
 id BOTTOM_START
@@ -3221,6 +3229,7 @@ id auto
 id autoComplete
 id autoCompleteToEnd
 id autoCompleteToStart
+id backButton
 id back_button
 id barrier
 id baseline
@@ -3239,9 +3248,11 @@ id btn_back
 id btn_voice_input
 id buttonPanel
 id button_back
+id button_bawang
 id button_easy_story
-id button_elephant
+id button_mic
 id button_shepherd
+id button_start_quiz
 id button_turtle
 id cache_measures
 id callMeasure
@@ -3294,6 +3305,7 @@ id decor_content_parent
 id default_activity_button
 id deltaRelative
 id dependency_ordering
+id descriptionTextView
 id design_bottom_sheet
 id design_menu_item_action_area
 id design_menu_item_action_area_stub
@@ -3333,6 +3345,7 @@ id escape
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
+id explanationTextView
 id fade
 id feedback_tv
 id fill
@@ -3666,6 +3679,7 @@ id withinBounds
 id wrap
 id wrap_content
 id wrap_content_constrained
+id wrongAnswerImageView
 id x_left
 id x_right
 integer abc_config_activityDefaultDur
@@ -3787,6 +3801,7 @@ layout activity_easy_level
 layout activity_hard_level
 layout activity_main
 layout activity_medium_level
+layout activity_wrong_answer
 layout custom_dialog
 layout dashboard
 layout design_bottom_navigation_item

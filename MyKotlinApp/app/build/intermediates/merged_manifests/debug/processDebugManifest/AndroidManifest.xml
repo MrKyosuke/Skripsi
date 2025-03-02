@@ -73,6 +73,12 @@
         <activity
             android:name="com.example.mykotlinapp.Elephant_Story"
             android:exported="true" />
+        <activity
+            android:name="com.example.mykotlinapp.WrongAnswer"
+            android:exported="true" />
+        <activity
+            android:name="com.example.mykotlinapp.Bawang_Merah"
+            android:exported="true" />
 
         <provider
             android:name="androidx.startup.InitializationProvider"
