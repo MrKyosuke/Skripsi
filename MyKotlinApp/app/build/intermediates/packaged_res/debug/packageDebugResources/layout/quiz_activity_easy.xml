@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFF9C4"
+    android:padding="16dp"
+    tools:context="EasyQuiz">
+
+    <!-- Story Image -->
+    <ImageView
+        android:id="@+id/story_image"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:scaleType="fitCenter"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Question Card -->
+    <TextView
+        android:id="@+id/question_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/question_card_bg"
+        android:padding="16dp"
+        android:text="Question here"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Answer Container with Images (Easy Mode) -->
+    <GridLayout
+        android:id="@+id/answer_image_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:rowCount="1"
+        android:columnCount="2"
+        android:layout_marginBottom="16dp">
+
+        <ImageView
+            android:id="@+id/answer_a_image"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_margin="8dp"
+            android:contentDescription="@string/answer_a_image" />
+
+        <ImageView
+            android:id="@+id/answer_b_image"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_margin="8dp"
+            android:contentDescription="@string/answer_b_image" />
+    </GridLayout>
+
+    <!-- Microphone Button -->
+    <ImageButton
+        android:id="@+id/btn_voice_input"
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:background="@null"
+        android:src="@android:drawable/ic_btn_speak_now"
+        android:layout_gravity="center" />
+</LinearLayout>
