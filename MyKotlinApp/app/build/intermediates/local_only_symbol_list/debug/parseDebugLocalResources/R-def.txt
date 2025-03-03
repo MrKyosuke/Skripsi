@@ -8,8 +8,10 @@ color yellow
 drawable about
 drawable answer_button_bg
 drawable back_button_red
+drawable baseline_check_circle_24
 drawable bawang_story
 drawable bg_view
+drawable checkmark
 drawable elephant_apologize
 drawable elephant_revenge
 drawable elephant_sees_ant
@@ -21,6 +23,7 @@ drawable ic_home
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable ic_levels
+drawable ic_placeholder
 drawable ic_settings
 drawable incident
 drawable lost_shawl
@@ -73,10 +76,11 @@ id descriptionTextView
 id explanationTextView
 id feedback_tv
 id level_title
+id paragraphContainer
 id question_tv
 id settings_title
-id storyImage
-id storyText
+id storyImageView
+id storyTextView
 id story_image
 id text_below_image
 id text_elephant

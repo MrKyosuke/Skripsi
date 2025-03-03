@@ -2993,6 +2993,7 @@ drawable answer_button_bg
 drawable avd_hide_password
 drawable avd_show_password
 drawable back_button_red
+drawable baseline_check_circle_24
 drawable bawang_story
 drawable bg_view
 drawable btn_checkbox_checked_mtrl
@@ -3003,6 +3004,7 @@ drawable btn_radio_off_mtrl
 drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
+drawable checkmark
 drawable design_fab_background
 drawable design_ic_visibility
 drawable design_ic_visibility_off
@@ -3036,6 +3038,7 @@ drawable ic_mtrl_checked_circle
 drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
+drawable ic_placeholder
 drawable ic_search_black_24
 drawable ic_settings
 drawable incident
@@ -3505,6 +3508,7 @@ id outline
 id outward
 id overshoot
 id packed
+id paragraphContainer
 id parallax
 id parent
 id parentPanel
@@ -3591,8 +3595,8 @@ id startVertical
 id staticLayout
 id staticPostLayout
 id stop
-id storyImage
-id storyText
+id storyImageView
+id storyTextView
 id story_image
 id stretch
 id submenuarrow

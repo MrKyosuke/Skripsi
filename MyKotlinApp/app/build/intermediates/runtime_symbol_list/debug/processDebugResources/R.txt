@@ -2992,6 +2992,7 @@ int drawable answer_button_bg 0x7f070079
 int drawable avd_hide_password 0x7f07007a
 int drawable avd_show_password 0x7f07007b
 int drawable back_button_red 0x7f07007c
+int drawable baseline_check_circle_24 0x7f070106
 int drawable bawang_story 0x7f07007d
 int drawable bg_view 0x7f07007e
 int drawable btn_checkbox_checked_mtrl 0x7f07007f
@@ -3002,6 +3003,7 @@ int drawable btn_radio_off_mtrl 0x7f070083
 int drawable btn_radio_off_to_on_mtrl_animation 0x7f070084
 int drawable btn_radio_on_mtrl 0x7f070085
 int drawable btn_radio_on_to_off_mtrl_animation 0x7f070086
+int drawable checkmark 0x7f070107
 int drawable design_fab_background 0x7f070087
 int drawable design_ic_visibility 0x7f070088
 int drawable design_ic_visibility_off 0x7f070089
@@ -3035,6 +3037,7 @@ int drawable ic_mtrl_checked_circle 0x7f0700a4
 int drawable ic_mtrl_chip_checked_black 0x7f0700a5
 int drawable ic_mtrl_chip_checked_circle 0x7f0700a6
 int drawable ic_mtrl_chip_close_circle 0x7f0700a7
+int drawable ic_placeholder 0x7f070105
 int drawable ic_search_black_24 0x7f0700a8
 int drawable ic_settings 0x7f0700a9
 int drawable incident 0x7f0700aa
@@ -3504,6 +3507,7 @@ int id outline 0x7f080174
 int id outward 0x7f080175
 int id overshoot 0x7f080176
 int id packed 0x7f080177
+int id paragraphContainer 0x7f08022b
 int id parallax 0x7f080178
 int id parent 0x7f080179
 int id parentPanel 0x7f08017a
@@ -3590,8 +3594,8 @@ int id startVertical 0x7f0801ca
 int id staticLayout 0x7f0801cb
 int id staticPostLayout 0x7f0801cc
 int id stop 0x7f0801cd
-int id storyImage 0x7f0801ce
-int id storyText 0x7f0801cf
+int id storyImageView 0x7f08022a
+int id storyTextView 0x7f080229
 int id story_image 0x7f0801d0
 int id stretch 0x7f0801d1
 int id submenuarrow 0x7f0801d2

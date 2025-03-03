@@ -16,10 +16,18 @@ class Turtle_Story : AppCompatActivity() {
         val viewPager: ViewPager2 = findViewById(R.id.viewPager)
 
         val storySegments = listOf(
-            StoryPage(R.drawable.rabbit_met, "One day, Rabbit asked the turtle to run a race because he felt he would win the race."),
-            StoryPage(R.drawable.rabbit_race, "On race day, the Rabbit raced fast at the start. Meanwhile, the tortoise tried to run as best he could to catch the hare."),
-            StoryPage(R.drawable.rabbit_sleep, "Approaching the finish line, the arrogant Rabbit chose to sleep for a while under a tree because he was sure that the Tortoise couldn't possibly catch up with him."),
-            StoryPage(R.drawable.rabbit_lost, "However, it turned out that he fell asleep longer than planned. In the end, the turtle managed to get ahead of him and won the race.")
+            StoryPage(R.drawable.rabbit_met, listOf(
+                "One day, Rabbit asked the turtle to run a race because he felt he would win the race."
+            )),
+            StoryPage(R.drawable.rabbit_race, listOf(
+                "On race day, the Rabbit raced fast at the start. Meanwhile, the tortoise tried to run as best he could to catch the hare."
+            )),
+            StoryPage(R.drawable.rabbit_sleep, listOf(
+                "Approaching the finish line, the arrogant Rabbit chose to sleep for a while under a tree because he was sure that the Tortoise couldn't possibly catch up with him."
+            )),
+            StoryPage(R.drawable.rabbit_lost, listOf(
+                "However, it turned out that he fell asleep longer than planned. In the end, the turtle managed to get ahead of him and won the race."
+            ))
         )
 
         val adapter = StoryPagerAdapter(this, storySegments)

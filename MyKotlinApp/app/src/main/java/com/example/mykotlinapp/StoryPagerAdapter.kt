@@ -12,6 +12,8 @@ class StoryPagerAdapter(fragmentActivity: FragmentActivity, private val stories:
 
     override fun createFragment(position: Int): Fragment {
         val story = stories[position]
-        return StoryFragment.newInstance(story.imageResId, story.storyText)
+        return StoryFragment.newInstance(story.imageResId, story.paragraphs) // Pass as List<String>
     }
+
+
 }

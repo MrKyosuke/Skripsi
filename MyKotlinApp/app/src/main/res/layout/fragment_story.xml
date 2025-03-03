@@ -6,17 +6,32 @@
     android:padding="16dp">
 
     <ImageView
-        android:id="@+id/storyImage"
+        android:id="@+id/storyImageView"
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:contentDescription="@string/story_image"
         android:scaleType="centerCrop" />
 
     <TextView
-        android:id="@+id/storyText"
+        android:id="@+id/storyTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:textSize="18sp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:id="@+id/paragraphContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"/>
+
+    </ScrollView>
+
 
 </LinearLayout>

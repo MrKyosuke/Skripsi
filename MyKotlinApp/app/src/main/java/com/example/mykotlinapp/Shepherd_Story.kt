@@ -16,10 +16,18 @@ class Shepherd_Story : AppCompatActivity() {
         val viewPager: ViewPager2 = findViewById(R.id.viewPager)
 
         val storySegments = listOf(
-            StoryPage(R.drawable.rabbit_met, "Test."),
-            StoryPage(R.drawable.rabbit_race, "Test2."),
-            StoryPage(R.drawable.rabbit_sleep, "Test 3."),
-            StoryPage(R.drawable.rabbit_lost, "Test 4.")
+            StoryPage(R.drawable.rabbit_met, listOf(
+                "Test."
+            )),
+            StoryPage(R.drawable.rabbit_met, listOf(
+                "Test."
+            )),
+            StoryPage(R.drawable.rabbit_met, listOf(
+                "Test."
+            )),
+            StoryPage(R.drawable.rabbit_met, listOf(
+                "Test."
+            ))
         )
 
         val adapter = StoryPagerAdapter(this, storySegments)

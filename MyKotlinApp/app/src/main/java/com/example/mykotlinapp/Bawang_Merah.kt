@@ -7,13 +7,16 @@ import android.os.Bundle
 import android.speech.RecognitionListener
 import android.speech.RecognizerIntent
 import android.speech.SpeechRecognizer
+import android.util.Log
 import android.view.View
 import android.widget.Button
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.viewpager2.widget.ViewPager2
+import com.example.interactivestorytellingapp.StoryFragment
 import com.example.interactivestorytellingapp.StoryPage
 import com.example.interactivestorytellingapp.StoryPagerAdapter
 import java.util.*
@@ -26,6 +29,7 @@ class Bawang_Merah : AppCompatActivity() {
     private lateinit var storySegments: List<StoryPage>
     private lateinit var speechRecognizer: SpeechRecognizer
     private lateinit var speechIntent: Intent
+    private lateinit var paragraphProgress: MutableList<MutableList<Boolean>>
 
     companion object {
         private const val RECORD_AUDIO_REQUEST_CODE = 200
@@ -34,41 +38,81 @@ class Bawang_Merah : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        buttonStartQuiz = findViewById(R.id.button_start_quiz)
+        buttonStartQuiz.visibility = View.GONE
+
+        // ✅ Initialize storySegments first
+        storySegments = listOf(
+            StoryPage(R.drawable.village_scene, listOf(
+                "A long time ago, in a quiet village, there lived a merchant and his daughter, Bawang Putih.",
+                "The merchant loved her because she was kind-hearted",
+                "One day, the merchant remarried, bringing home a new wife and her daughter, Bawang Merah.",
+                "After the merchant left for work, Bawang Putih was forced to do all the chores by her stepmother and stepsister.")
+            ),
+            StoryPage(R.drawable.incident, listOf(
+                "As time passed, White Onion father fell ill and passed away.",
+                "After his death, her stepmother and Bawang Merah treated Bawang Putih even worse, making her do all the household work.",
+                " She was often punished if she made mistakes, and her life became very hard.")
+            ),
+            StoryPage(R.drawable.lost_shawl, listOf(
+                "One day, while washing clothes by the river, Bawang Putih accidentally let her stepmother’s favorite red shawl drift away.",
+                "She was scared of returning home without it and went in search of the shawl.",
+                "Along the way, she met a kind old grandmother who had found the shawl.")
+            ),
+            StoryPage(R.drawable.pumpkin_gift, listOf(
+                "The grandmother agreed to return the shawl but asked Bawang Putih to help with her chores first.",
+                "After helping, the grandmother offered her a reward either a large or small pumpkin.",
+                "Bawang Putih chose the small pumpkin and, following the grandmother's advice, waited until she got home to open it.")
+            ),
+            StoryPage(R.drawable.treasure, listOf(
+                "At home, Bawang Putih’s stepmother and Bawang Merah were furious with her.",
+                "But when Bawang Putih cut open the small pumpkin, they were shocked to find it filled with sparkling jewels.",
+                "The stepmother and Bawang Merah were jealous and wanted to get more jewels for themselves.")
+            ),
+            StoryPage(R.drawable.false_pumpkin, listOf(
+                "The next day, Bawang Merah and her mother went to the river, hoping to repeat Bawang Putih’s good fortune.",
+                "They followed the same steps, helping the grandmother and choosing the biggest pumpkin.",
+                "However, on their way home, they greedily opened the pumpkin too early.")
+            ),
+            StoryPage(R.drawable.punishment, listOf(
+                "To their horror, the pumpkin was filled with venomous creatures like snakes and scorpions.",
+                "Both Bawang Merah and her mother died because of their greed, while Bawang Putih lived happily, continuing her father’s business and enjoying her wealth.")
+            )
+        )
+
+        // ✅ Now it is safe to access storySegments
+        storySegments.forEachIndexed { index, page ->
+            page.paragraphs.forEach { paragraph ->
+                println("Page $index: $paragraph")
+            }
+        }
 
         viewPager = findViewById(R.id.viewPager)
         buttonMic = findViewById(R.id.button_mic)
         buttonStartQuiz = findViewById(R.id.button_start_quiz)
 
-        storySegments = listOf(
-            StoryPage(R.drawable.village_scene, "A long time ago, in a quiet village, there lived a merchant and his daughter, Bawang Putih..."),
-            StoryPage(R.drawable.incident, "As time passed, Bawang Putih's father fell ill and passed away..."),
-            StoryPage(R.drawable.lost_shawl, "One day, while washing clothes by the river, Bawang Putih accidentally let her stepmother’s favorite red shawl drift away..."),
-            StoryPage(R.drawable.pumpkin_gift, "The grandmother agreed to return the shawl but asked Bawang Putih to help with her chores first..."),
-            StoryPage(R.drawable.treasure, "At home, Bawang Putih’s stepmother and Bawang Merah were furious with her..."),
-            StoryPage(R.drawable.false_pumpkin, "The next day, Bawang Merah and her mother went to the river, hoping to repeat Bawang Putih’s good fortune..."),
-            StoryPage(R.drawable.punishment, "To their horror, the pumpkin was filled with venomous creatures like snakes and scorpions...")
-        )
+        // ✅ Initialize paragraph progress tracking
+        paragraphProgress = storySegments.map { page -> MutableList(page.paragraphs.size) { false } }.toMutableList()
 
         val adapter = StoryPagerAdapter(this, storySegments)
         viewPager.adapter = adapter
 
         buttonStartQuiz.visibility = View.GONE
-
         viewPager.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
             override fun onPageSelected(position: Int) {
                 super.onPageSelected(position)
-                buttonStartQuiz.visibility = if (position == storySegments.size - 1) View.VISIBLE else View.GONE
+                if (position == storySegments.size - 1) {
+                    checkAllParagraphsCompletion()
+                }
             }
         })
 
-        // Log untuk cek lagi request permission, untuk kira" bisa lihat errornya dimana ketika User ingin press Mic Button
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.RECORD_AUDIO) != PackageManager.PERMISSION_GRANTED) {
             ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.RECORD_AUDIO), RECORD_AUDIO_REQUEST_CODE)
         } else {
             initializeSpeechRecognizer()
         }
 
-        // add fitur untuk dapat request mic permission ke android device, agar tidak nampilin pop Up google
         buttonMic.setOnClickListener {
             if (ContextCompat.checkSelfPermission(this, Manifest.permission.RECORD_AUDIO) == PackageManager.PERMISSION_GRANTED) {
                 startListening()
@@ -97,7 +141,7 @@ class Bawang_Merah : AppCompatActivity() {
             override fun onReadyForSpeech(params: Bundle?) {
                 Toast.makeText(this@Bawang_Merah, "Listening...", Toast.LENGTH_SHORT).show()
             }
-            //pakai func ini untuk bisa cek paragraf panjang
+
             override fun onBeginningOfSpeech() {}
 
             override fun onRmsChanged(rmsdB: Float) {}
@@ -113,18 +157,25 @@ class Bawang_Merah : AppCompatActivity() {
                 Toast.makeText(this@Bawang_Merah, "Error: $errorMessage", Toast.LENGTH_SHORT).show()
             }
 
-            //hasil text yg di input dan di expect system pakai func ini, dan akan otomatis ke next page kalau sudah benar
             override fun onResults(results: Bundle?) {
                 val matches = results?.getStringArrayList(SpeechRecognizer.RESULTS_RECOGNITION)
                 val spokenText = matches?.get(0)?.trim() ?: return
-                val expectedText = storySegments[viewPager.currentItem].storyText
+                val currentPage = viewPager.currentItem
+                val paragraphs = storySegments[currentPage].paragraphs
 
-                if (isSpeechMatching(spokenText, expectedText)) {
-                    moveToNextPage()
-                } else {
-                    Toast.makeText(this@Bawang_Merah, "Try again! Read it clearly.", Toast.LENGTH_SHORT).show()
+                for (i in paragraphs.indices) {
+                    if (!paragraphProgress[currentPage][i] && isSpeechMatching(spokenText, paragraphs[i])) {
+                        paragraphProgress[currentPage][i] = true
+                        Log.d("SpeechRecognition", "Paragraph $i on page $currentPage marked as read: ${paragraphProgress[currentPage]}")
+                        showCheckmark(currentPage, i)
+                        checkPageCompletion()
+                        checkAllParagraphsCompletion()
+                        return
+                    }
                 }
+                Toast.makeText(this@Bawang_Merah, "Try again! Read it clearly.", Toast.LENGTH_SHORT).show()
             }
+
 
             override fun onPartialResults(partialResults: Bundle?) {}
 
@@ -132,7 +183,6 @@ class Bawang_Merah : AppCompatActivity() {
         })
     }
 
-    //tambah func ini error ini untuk test kalau permission dari mic nya belum di allow User
     private fun startListening() {
         if (!SpeechRecognizer.isRecognitionAvailable(this)) {
             Toast.makeText(this, "Speech Recognition is not available", Toast.LENGTH_LONG).show()
@@ -144,15 +194,24 @@ class Bawang_Merah : AppCompatActivity() {
     private fun isSpeechMatching(spokenText: String, expectedText: String): Boolean {
         val spokenWords = spokenText.lowercase(Locale.getDefault()).split(" ")
         val expectedWords = expectedText.lowercase(Locale.getDefault()).split(" ")
-
         val matchCount = spokenWords.count { it in expectedWords }
-        return matchCount >= expectedWords.size * 0.7
+        return matchCount >= expectedWords.size * 0.4
     }
 
     private fun moveToNextPage() {
         val nextPage = viewPager.currentItem + 1
+
+        // ✅ Debugging Log
+        Log.d("StoryNavigation", "Moving from page ${viewPager.currentItem} to page $nextPage")
+
         if (nextPage < storySegments.size) {
             viewPager.setCurrentItem(nextPage, true)
+        } else {
+            Log.d("StoryNavigation", "Reached last page, transitioning to quiz")
+            val intent = Intent(this, Quiz::class.java)
+            intent.putExtra("story_id", "bawang_merah")
+            startActivity(intent)
+            finish()
         }
     }
 
@@ -161,7 +220,7 @@ class Bawang_Merah : AppCompatActivity() {
         speechRecognizer.destroy()
     }
 
-    //semua error code dari GPT untuk test apa saja errornya, tapi masih bisa dicek manual dari Logcat
+    //untuk liat errornya dimana aja, jadi bisa di-display error messagenya
     private fun getErrorText(errorCode: Int): String {
         return when (errorCode) {
             SpeechRecognizer.ERROR_NETWORK_TIMEOUT -> "Network timeout"
@@ -177,17 +236,39 @@ class Bawang_Merah : AppCompatActivity() {
         }
     }
 
-    //func untuk nampillin request Access Mic ke User
-    override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
-        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
+    private fun checkPageCompletion() {
+        val currentPage = viewPager.currentItem
 
-        if (requestCode == RECORD_AUDIO_REQUEST_CODE) {
-            if (grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                initializeSpeechRecognizer()
-                Toast.makeText(this, "Microphone permission granted!", Toast.LENGTH_SHORT).show()
-            } else {
-                Toast.makeText(this, "Microphone permission denied! Please enable it in settings.", Toast.LENGTH_LONG).show()
-            }
+        // ✅ Debugging Log
+        Log.d("PageCompletion", "Checking page $currentPage - Progress: ${paragraphProgress[currentPage]}")
+
+        if (paragraphProgress[currentPage].all { it }) {
+            Log.d("PageCompletion", "All paragraphs completed on page $currentPage")
+            moveToNextPage()
+        }
+        checkAllParagraphsCompletion()
+    }
+
+    private fun checkAllParagraphsCompletion() {
+        val allRead = paragraphProgress.all { pageProgress -> pageProgress.all { it } } // ✅ Check all pages
+
+        if (allRead) {
+            Log.d("StoryProgress", "All paragraphs in the story have been read.")
+            buttonStartQuiz.visibility = View.VISIBLE // ✅ Show Quiz button
+        } else {
+            buttonStartQuiz.visibility = View.GONE // ✅ Hide Quiz button until all are read
         }
     }
+
+
+
+    private fun showCheckmark(pageIndex: Int, paragraphIndex: Int) {
+        val fragment = supportFragmentManager.findFragmentByTag("f$pageIndex") as? StoryFragment
+        fragment?.let {
+            Log.d("Checkmark", "Marking paragraph $paragraphIndex as read on page $pageIndex")
+            it.markParagraphAsRead(paragraphIndex)  // Ensure this function exists in StoryFragment
+        }
+    }
+
+
 }
