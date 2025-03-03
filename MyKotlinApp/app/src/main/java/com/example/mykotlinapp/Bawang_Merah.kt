@@ -17,6 +17,8 @@ import androidx.viewpager2.widget.ViewPager2
 import com.example.interactivestorytellingapp.StoryPage
 import com.example.interactivestorytellingapp.StoryPagerAdapter
 import java.util.*
+import android.speech.tts.TextToSpeech
+import java.util.Locale
 
 class Bawang_Merah : AppCompatActivity() {
 
@@ -26,6 +28,7 @@ class Bawang_Merah : AppCompatActivity() {
     private lateinit var storySegments: List<StoryPage>
     private lateinit var speechRecognizer: SpeechRecognizer
     private lateinit var speechIntent: Intent
+    private lateinit var textToSpeech: TextToSpeech
 
     companion object {
         private const val RECORD_AUDIO_REQUEST_CODE = 200
@@ -39,6 +42,9 @@ class Bawang_Merah : AppCompatActivity() {
         buttonMic = findViewById(R.id.button_mic)
         buttonStartQuiz = findViewById(R.id.button_start_quiz)
 
+        val btnReadAloud: Button? = findViewById(R.id.btnReadAloud)
+        btnReadAloud?.visibility = View.GONE // Show button in Turtle_Story
+
         storySegments = listOf(
             StoryPage(R.drawable.village_scene, "A long time ago, in a quiet village, there lived a merchant and his daughter, Bawang Putih..."),
             StoryPage(R.drawable.incident, "As time passed, Bawang Putih's father fell ill and passed away..."),
@@ -49,7 +55,18 @@ class Bawang_Merah : AppCompatActivity() {
             StoryPage(R.drawable.punishment, "To their horror, the pumpkin was filled with venomous creatures like snakes and scorpions...")
         )
 
-        val adapter = StoryPagerAdapter(this, storySegments)
+        textToSpeech = TextToSpeech(this) { status ->
+            if (status == TextToSpeech.SUCCESS) {
+                textToSpeech.language = Locale.ENGLISH
+            }
+        }
+
+        val adapter = StoryPagerAdapter(
+            this,
+            storySegments,
+            showReadAloudButton = false, // Hide button
+            onReadAloudClick = { text -> speakText(text) }
+        )
         viewPager.adapter = adapter
 
         buttonStartQuiz.visibility = View.GONE
@@ -146,7 +163,7 @@ class Bawang_Merah : AppCompatActivity() {
         val expectedWords = expectedText.lowercase(Locale.getDefault()).split(" ")
 
         val matchCount = spokenWords.count { it in expectedWords }
-        return matchCount >= expectedWords.size * 0.7
+        return matchCount >= expectedWords.size * 0.3
     }
 
     private fun moveToNextPage() {
@@ -156,10 +173,7 @@ class Bawang_Merah : AppCompatActivity() {
         }
     }
 
-    override fun onDestroy() {
-        super.onDestroy()
-        speechRecognizer.destroy()
-    }
+
 
     //semua error code dari GPT untuk test apa saja errornya, tapi masih bisa dicek manual dari Logcat
     private fun getErrorText(errorCode: Int): String {
@@ -188,6 +202,21 @@ class Bawang_Merah : AppCompatActivity() {
             } else {
                 Toast.makeText(this, "Microphone permission denied! Please enable it in settings.", Toast.LENGTH_LONG).show()
             }
+        }
+    }
+
+    private fun speakText(text: String) {
+        if (::textToSpeech.isInitialized) {
+            textToSpeech.speak(text, TextToSpeech.QUEUE_FLUSH, null, null)
+        }
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        speechRecognizer.destroy()
+        if (::textToSpeech.isInitialized) {
+            textToSpeech.stop()
+            textToSpeech.shutdown()
         }
     }
 }

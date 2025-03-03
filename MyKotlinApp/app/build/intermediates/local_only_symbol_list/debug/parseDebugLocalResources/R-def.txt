@@ -54,6 +54,7 @@ id backButton
 id back_button
 id bgm_label
 id bgm_switch
+id btnReadAloud
 id btn_back
 id btn_voice_input
 id button_back

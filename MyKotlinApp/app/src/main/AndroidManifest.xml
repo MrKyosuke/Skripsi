@@ -2,8 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
 
     <application
         android:allowBackup="true"
@@ -20,7 +20,6 @@
             android:exported="true">
 
         </activity>
-
         <activity
             android:name=".Dashboard"
             android:exported="true">
@@ -30,55 +29,42 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".SecondActivity"
-            android:exported="true"/>
-
+            android:exported="true" />
         <activity
             android:name=".Level"
-            android:exported="true"/>
-
+            android:exported="true" />
         <activity
             android:name=".Settings"
-            android:exported="true"/>
-
+            android:exported="true" />
         <activity
             android:name=".About"
-            android:exported="true"/>
-
+            android:exported="true" />
         <activity
             android:name=".EasyLevel"
-            android:exported="true"/>
-
+            android:exported="true" />
         <activity
             android:name=".MediumLevel"
-            android:exported="true"/>
-
+            android:exported="true" />
         <activity
             android:name=".HardLevel"
-            android:exported="true"/>
-
+            android:exported="true" />
         <activity
             android:name=".Turtle_Story"
-            android:exported="true"/>
-
+            android:exported="true" />
         <activity
             android:name=".Shepherd_Story"
-            android:exported="true"/>
-
+            android:exported="true" />
         <activity
             android:name=".Elephant_Story"
-            android:exported="true"/>
-
+            android:exported="true" />
         <activity
             android:name=".WrongAnswer"
-            android:exported="true"/>
-
+            android:exported="true" />
         <activity
             android:name=".Bawang_Merah"
-            android:exported="true"/>
-
+            android:exported="true" />
     </application>
 
 </manifest>

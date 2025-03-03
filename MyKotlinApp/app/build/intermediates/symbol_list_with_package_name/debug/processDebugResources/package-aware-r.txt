@@ -3244,6 +3244,7 @@ id bounce
 id bounceBoth
 id bounceEnd
 id bounceStart
+id btnReadAloud
 id btn_back
 id btn_voice_input
 id buttonPanel

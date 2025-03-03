@@ -6,8 +6,12 @@ import android.content.Intent
 import androidx.viewpager2.widget.ViewPager2
 import com.example.interactivestorytellingapp.StoryPage
 import com.example.interactivestorytellingapp.StoryPagerAdapter
+import android.speech.tts.TextToSpeech
+import java.util.Locale
 
 class Elephant_Story : AppCompatActivity() {
+
+    private lateinit var textToSpeech: TextToSpeech
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -28,7 +32,18 @@ class Elephant_Story : AppCompatActivity() {
                     "\n\n\nFrom that day on, the elephant promised not to disturb any living thing in the forest. And this is how the giant elephant learned. After that, all the living things in the forest lived happily ever after..")
         )
 
-        val adapter = StoryPagerAdapter(this, storySegments)
+        textToSpeech = TextToSpeech(this) { status ->
+            if (status == TextToSpeech.SUCCESS) {
+                textToSpeech.language = Locale.ENGLISH
+            }
+        }
+
+        val adapter = StoryPagerAdapter(
+            this,
+            storySegments,
+            showReadAloudButton = false, // Hide button
+            onReadAloudClick = { text -> speakText(text) }
+        )
         viewPager.adapter = adapter
 
         // Add a listener to detect when the user reaches the last page
@@ -49,6 +64,20 @@ class Elephant_Story : AppCompatActivity() {
                 }
             }
         })
+    }
+
+    private fun speakText(text: String) {
+        if (::textToSpeech.isInitialized) {
+            textToSpeech.speak(text, TextToSpeech.QUEUE_FLUSH, null, null)
+        }
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        if (::textToSpeech.isInitialized) {
+            textToSpeech.stop()
+            textToSpeech.shutdown()
+        }
     }
 }
 

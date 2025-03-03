@@ -6,8 +6,14 @@ import android.content.Intent
 import androidx.viewpager2.widget.ViewPager2
 import com.example.interactivestorytellingapp.StoryPage
 import com.example.interactivestorytellingapp.StoryPagerAdapter
+import android.speech.tts.TextToSpeech
+import android.widget.Button
+import java.util.Locale
+import android.view.View
 
 class Shepherd_Story : AppCompatActivity() {
+
+    private lateinit var textToSpeech: TextToSpeech
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -22,7 +28,18 @@ class Shepherd_Story : AppCompatActivity() {
             StoryPage(R.drawable.rabbit_lost, "Test 4.")
         )
 
-        val adapter = StoryPagerAdapter(this, storySegments)
+        textToSpeech = TextToSpeech(this) { status ->
+            if (status == TextToSpeech.SUCCESS) {
+                textToSpeech.language = Locale.ENGLISH
+            }
+        }
+
+        val adapter = StoryPagerAdapter(
+            this,
+            storySegments,
+            showReadAloudButton = false, // Hide button
+            onReadAloudClick = { text -> speakText(text) }
+        )
         viewPager.adapter = adapter
 
         // Add a listener to detect when the user reaches the last page
@@ -41,8 +58,23 @@ class Shepherd_Story : AppCompatActivity() {
                         finish() // Close the story activity
                     }, 1000) // 1-second delay for better UX
                 }
+
             }
         })
+    }
+
+    private fun speakText(text: String) {
+        if (::textToSpeech.isInitialized) {
+            textToSpeech.speak(text, TextToSpeech.QUEUE_FLUSH, null, null)
+        }
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        if (::textToSpeech.isInitialized) {
+            textToSpeech.stop()
+            textToSpeech.shutdown()
+        }
     }
 }
 

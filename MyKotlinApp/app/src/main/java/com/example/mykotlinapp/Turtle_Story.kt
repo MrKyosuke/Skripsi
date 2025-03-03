@@ -6,14 +6,21 @@ import android.content.Intent
 import androidx.viewpager2.widget.ViewPager2
 import com.example.interactivestorytellingapp.StoryPage
 import com.example.interactivestorytellingapp.StoryPagerAdapter
+import android.speech.tts.TextToSpeech
+import android.view.View
+import java.util.Locale
+import android.widget.Button
 
 class Turtle_Story : AppCompatActivity() {
+
+    private lateinit var textToSpeech: TextToSpeech
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
         val viewPager: ViewPager2 = findViewById(R.id.viewPager)
+
 
         val storySegments = listOf(
             StoryPage(R.drawable.rabbit_met, "One day, Rabbit asked the turtle to run a race because he felt he would win the race."),
@@ -22,7 +29,18 @@ class Turtle_Story : AppCompatActivity() {
             StoryPage(R.drawable.rabbit_lost, "However, it turned out that he fell asleep longer than planned. In the end, the turtle managed to get ahead of him and won the race.")
         )
 
-        val adapter = StoryPagerAdapter(this, storySegments)
+        textToSpeech = TextToSpeech(this) { status ->
+            if (status == TextToSpeech.SUCCESS) {
+                textToSpeech.language = Locale.ENGLISH
+            }
+        }
+
+        val adapter = StoryPagerAdapter(
+            this,
+            storySegments,
+            showReadAloudButton = true, // Hide button
+            onReadAloudClick = { text -> speakText(text) }
+        )
         viewPager.adapter = adapter
 
         // untuk detect listener
@@ -44,5 +62,20 @@ class Turtle_Story : AppCompatActivity() {
             }
         })
     }
+
+    private fun speakText(text: String) {
+        if (::textToSpeech.isInitialized) {
+            textToSpeech.speak(text, TextToSpeech.QUEUE_FLUSH, null, null)
+        }
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        if (::textToSpeech.isInitialized) {
+            textToSpeech.stop()
+            textToSpeech.shutdown()
+        }
+    }
+
 }
 

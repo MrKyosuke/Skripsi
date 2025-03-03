@@ -12,6 +12,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toTopOf="@id/button_mic" />
 
+
     <Button
         android:id="@+id/button_mic"
         android:layout_width="wrap_content"
