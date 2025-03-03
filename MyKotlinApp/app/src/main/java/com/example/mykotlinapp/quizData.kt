@@ -9,8 +9,6 @@ data class QuizQuestion(
     val imageResId: Int,
     val answers: List<String>,
     val correctAnswerIndex: Int,
-    val answerImageRes: List<Int>? = null,
-    val explanations: List<String>
 )
 
 

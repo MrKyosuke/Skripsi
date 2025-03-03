@@ -76,7 +76,7 @@ class malinKundang : AppCompatActivity() {
                 "She cursed her ungrateful son, calling upon the sea and sky to punish him for his arrogance and betrayal.")
             ),
             storyPage(R.drawable.the_punishment, listOf(
-                "As Malin Kundang’s ship sailed away, dark clouds gathered, and the sea roared.",
+                "As Malin Kundang's ship left, the sky turned dark, and the sea became rough.",
                 "A powerful storm struck, and lightning turned him into stone.",
                 "To this day, a rock shaped like a kneeling man can be seen on the shore, a reminder of Malin Kundang’s fate")
             )
@@ -113,7 +113,7 @@ class malinKundang : AppCompatActivity() {
         val adapter = storyPagerAdapter(
             this,
             storySegments,
-            showReadAloudButton = true,
+            showReadAloudButton = false,
             onReadAloudClick = { text -> speakText(text) },
             getParagraphProgress = { pageIndex -> paragraphProgress[pageIndex] } // Pass stored progress
         )

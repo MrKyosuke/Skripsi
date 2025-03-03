@@ -52,7 +52,7 @@ class bawangMerah : AppCompatActivity() {
                 "After the merchant left for work, Bawang Putih was forced to do all the chores by her stepmother and stepsister.")
             ),
             storyPage(R.drawable.incident, listOf(
-                "As time passed, White Onion father fell ill and passed away.",
+                "As time passed, Bawang Putih father fell ill and passed away.",
                 "After his death, her stepmother and Bawang Merah treated Bawang Putih even worse, making her do all the household work.",
                 " She was often punished if she made mistakes, and her life became very hard.")
             ),
@@ -113,7 +113,7 @@ class bawangMerah : AppCompatActivity() {
         val adapter = storyPagerAdapter(
             this,
             storySegments,
-            showReadAloudButton = true,
+            showReadAloudButton = false,
             onReadAloudClick = { text -> speakText(text) },
             getParagraphProgress = { pageIndex -> paragraphProgress[pageIndex] } // Pass stored progress
         )

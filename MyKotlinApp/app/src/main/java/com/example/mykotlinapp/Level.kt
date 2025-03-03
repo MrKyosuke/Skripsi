@@ -12,10 +12,10 @@ class Level : AppCompatActivity() {
         setContentView(R.layout.level_activity)
 
         // Easy Level
-        findViewById<CardView>(R.id.card_easy).setOnClickListener {
-            val intent = Intent(this, easyLevel::class.java)
-            startActivity(intent)
-        }
+//        findViewById<CardView>(R.id.card_easy).setOnClickListener {
+//            val intent = Intent(this, easyLevel::class.java)
+//            startActivity(intent)
+//        }
 
         // Medium Level
         findViewById<CardView>(R.id.card_medium).setOnClickListener {
