@@ -6,7 +6,7 @@
     android:orientation="vertical"
     android:background="#FFF9C4"
     android:padding="16dp"
-    tools:context="EasyQuiz">
+    tools:context="easyQuiz">
 
     <!-- Story Image -->
     <ImageView

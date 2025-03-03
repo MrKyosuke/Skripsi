@@ -44,7 +44,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.mykotlinapp.SecondActivity"
+            android:name="com.example.mykotlinapp.secondActivity"
             android:exported="true" />
         <activity
             android:name="com.example.mykotlinapp.Level"
@@ -56,28 +56,31 @@
             android:name="com.example.mykotlinapp.About"
             android:exported="true" />
         <activity
-            android:name="com.example.mykotlinapp.EasyLevel"
+            android:name="com.example.mykotlinapp.easyLevel"
             android:exported="true" />
         <activity
-            android:name="com.example.mykotlinapp.MediumLevel"
+            android:name="com.example.mykotlinapp.mediumLevel"
             android:exported="true" />
         <activity
-            android:name="com.example.mykotlinapp.HardLevel"
+            android:name="com.example.mykotlinapp.hardLevel"
             android:exported="true" />
         <activity
-            android:name="com.example.mykotlinapp.Turtle_Story"
+            android:name="com.example.mykotlinapp.malinKundang"
             android:exported="true" />
         <activity
-            android:name="com.example.mykotlinapp.Shepherd_Story"
+            android:name="com.example.mykotlinapp.shepherdStory"
             android:exported="true" />
         <activity
-            android:name="com.example.mykotlinapp.Elephant_Story"
+            android:name="com.example.mykotlinapp.wrongAnswer"
             android:exported="true" />
         <activity
-            android:name="com.example.mykotlinapp.WrongAnswer"
+            android:name="com.example.mykotlinapp.bawangMerah"
             android:exported="true" />
         <activity
-            android:name="com.example.mykotlinapp.Bawang_Merah"
+            android:name="com.example.mykotlinapp.bawangMerahEasy"
+            android:exported="true" />
+        <activity
+            android:name="com.example.mykotlinapp.easyQuiz"
             android:exported="true" />
 
         <provider
