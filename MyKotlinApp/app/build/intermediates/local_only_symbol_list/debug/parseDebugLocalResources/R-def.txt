@@ -47,6 +47,7 @@ drawable success_merc
 drawable the_elephant_and_the_ant
 drawable the_punishment
 drawable treasure
+drawable try_again
 drawable turtle_rabbit
 drawable village_scene
 id about_description

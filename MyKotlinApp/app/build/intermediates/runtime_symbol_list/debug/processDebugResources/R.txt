@@ -3138,6 +3138,7 @@ int drawable the_punishment 0x7f07010a
 int drawable tooltip_frame_dark 0x7f07010b
 int drawable tooltip_frame_light 0x7f07010c
 int drawable treasure 0x7f07010d
+int drawable try_again 0x7f070110
 int drawable turtle_rabbit 0x7f07010e
 int drawable village_scene 0x7f07010f
 int id ALT 0x7f080000

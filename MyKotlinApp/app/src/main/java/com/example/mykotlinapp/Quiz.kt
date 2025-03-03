@@ -105,7 +105,7 @@ class Quiz : AppCompatActivity() {
             Toast.makeText(this, "Nice One!", Toast.LENGTH_SHORT).show()
             proceedToNextQuestion()
         } else {
-            val wrongAnswerData = wrongAnswerRepository.getWrongAnswer(
+            val wrongAnswerData = wrongAnswerRepositorMedium.getWrongAnswer(
                 storyId = intent.getStringExtra("story_id") ?: "",
                 questionIndex = currentQuestionIndex,
                 selectedAnswer = spokenText

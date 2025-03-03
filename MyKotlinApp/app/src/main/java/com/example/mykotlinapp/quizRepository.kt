@@ -57,7 +57,7 @@ object quizRepository {
                 QuizQuestion(
                     imageResId = R.drawable.the_punishment,
                     question = "What happened to Malin Kundang at the end of the story?",
-                    answers = listOf("He became even richer", "He apologized to his mothe", "He was turned into stone by a curse", "He ran away to another village"),
+                    answers = listOf("He became even richer", "He apologized to his mother", "He was turned into stone by a curse", "He ran away to another village"),
                     correctAnswerIndex = 2
                 )
             )

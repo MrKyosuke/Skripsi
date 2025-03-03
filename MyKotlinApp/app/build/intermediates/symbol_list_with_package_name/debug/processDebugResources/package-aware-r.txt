@@ -3139,6 +3139,7 @@ drawable the_punishment
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
 drawable treasure
+drawable try_again
 drawable turtle_rabbit
 drawable village_scene
 id ALT
