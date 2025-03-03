@@ -2090,6 +2090,7 @@ color primary_text_default_material_dark
 color primary_text_default_material_light
 color primary_text_disabled_material_dark
 color primary_text_disabled_material_light
+color purple
 color ripple_material_dark
 color ripple_material_light
 color secondary_text_default_material_dark
@@ -2993,6 +2994,7 @@ drawable answer_button_bg
 drawable avd_hide_password
 drawable avd_show_password
 drawable back_button_red
+drawable baseline_check_circle_24
 drawable bawang_story
 drawable bg_view
 drawable btn_checkbox_checked_mtrl
@@ -3003,6 +3005,8 @@ drawable btn_radio_off_mtrl
 drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
+drawable checkmark
+drawable curse
 drawable design_fab_background
 drawable design_ic_visibility
 drawable design_ic_visibility_off
@@ -3014,6 +3018,7 @@ drawable elephant_sees_ant
 drawable elephant_shoots_water
 drawable false_pumpkin
 drawable fox_story
+drawable happy_mom
 drawable ic_arrow_back_black_24
 drawable ic_back_arrow
 drawable ic_call_answer
@@ -3036,6 +3041,7 @@ drawable ic_mtrl_checked_circle
 drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
+drawable ic_placeholder
 drawable ic_search_black_24
 drawable ic_settings
 drawable incident
@@ -3052,6 +3058,7 @@ drawable m3_tabs_background
 drawable m3_tabs_line_indicator
 drawable m3_tabs_rounded_line_indicator
 drawable m3_tabs_transparent_background
+drawable malin_leave
 drawable material_cursor_drawable
 drawable material_ic_calendar_black_24dp
 drawable material_ic_clear_black_24dp
@@ -3062,6 +3069,7 @@ drawable material_ic_keyboard_arrow_previous_black_24dp
 drawable material_ic_keyboard_arrow_right_black_24dp
 drawable material_ic_menu_arrow_down_black_24dp
 drawable material_ic_menu_arrow_up_black_24dp
+drawable mk_title
 drawable mtrl_bottomsheet_drag_handle
 drawable mtrl_checkbox_button
 drawable mtrl_checkbox_button_checked_unchecked
@@ -3113,6 +3121,7 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
+drawable poor_fisherman
 drawable pumpkin_gift
 drawable punishment
 drawable question_card_bg
@@ -3120,10 +3129,13 @@ drawable rabbit_lost
 drawable rabbit_met
 drawable rabbit_race
 drawable rabbit_sleep
+drawable rejection
 drawable sheep_test
 drawable shepherd_field
+drawable success_merc
 drawable test_level_drawable
 drawable the_elephant_and_the_ant
+drawable the_punishment
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
 drawable treasure
@@ -3251,8 +3263,8 @@ id buttonPanel
 id button_back
 id button_bawang
 id button_easy_story
+id button_malin
 id button_mic
-id button_shepherd
 id button_start_quiz
 id button_turtle
 id cache_measures
@@ -3506,6 +3518,7 @@ id outline
 id outward
 id overshoot
 id packed
+id paragraphContainer
 id parallax
 id parent
 id parentPanel
@@ -3592,8 +3605,8 @@ id startVertical
 id staticLayout
 id staticPostLayout
 id stop
-id storyImage
-id storyText
+id storyImageView
+id storyTextView
 id story_image
 id stretch
 id submenuarrow
@@ -3801,6 +3814,7 @@ layout about_activity
 layout activity_easy_level
 layout activity_hard_level
 layout activity_main
+layout activity_main_easy
 layout activity_medium_level
 layout activity_wrong_answer
 layout custom_dialog

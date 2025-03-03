@@ -43,7 +43,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Easy"
+                android:text="Storytime Explorer (Easy)"
                 android:textColor="@color/black"
                 android:textSize="20sp"
                 android:textStyle="bold" />
@@ -52,7 +52,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:text="Ages 3-5: Simple and fun challenges."
+                android:text="Listen to Folklore stories!"
                 android:textColor="@color/black"
                 android:textSize="14sp" />
         </LinearLayout>
@@ -80,7 +80,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Medium"
+                android:text="Reading Adventurer (Medium)"
                 android:textColor="@color/black"
                 android:textSize="20sp"
                 android:textStyle="bold" />
@@ -89,7 +89,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:text="Ages 6-7: Grammar and Narative challenges."
+                android:text="Practice speaking by reading the stories!."
                 android:textColor="@color/black"
                 android:textSize="14sp" />
         </LinearLayout>
@@ -117,7 +117,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Hard"
+                android:text="Experienced Reader (Hard)"
                 android:textSize="20sp"
                 android:textColor="@color/black"
                 android:textStyle="bold"/>
@@ -125,7 +125,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Age 8-10: Harder challenge."
+                android:text="Trickier Questions and longer texts!"
                 android:textSize="14sp"
                 android:textColor="@color/black"
                 android:layout_marginTop="8dp"/>

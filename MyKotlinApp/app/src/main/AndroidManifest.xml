@@ -30,7 +30,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".SecondActivity"
+            android:name=".secondActivity"
             android:exported="true" />
         <activity
             android:name=".Level"
@@ -42,28 +42,31 @@
             android:name=".About"
             android:exported="true" />
         <activity
-            android:name=".EasyLevel"
+            android:name=".easyLevel"
             android:exported="true" />
         <activity
-            android:name=".MediumLevel"
+            android:name=".mediumLevel"
             android:exported="true" />
         <activity
-            android:name=".HardLevel"
+            android:name=".hardLevel"
             android:exported="true" />
         <activity
-            android:name=".Turtle_Story"
+            android:name=".malinKundang"
             android:exported="true" />
         <activity
-            android:name=".Shepherd_Story"
+            android:name=".shepherdStory"
             android:exported="true" />
         <activity
-            android:name=".Elephant_Story"
+            android:name=".wrongAnswer"
             android:exported="true" />
         <activity
-            android:name=".WrongAnswer"
+            android:name=".bawangMerah"
             android:exported="true" />
         <activity
-            android:name=".Bawang_Merah"
+            android:name=".bawangMerahEasy"
+            android:exported="true" />
+        <activity
+            android:name=".easyQuiz"
             android:exported="true" />
     </application>
 

@@ -3,8 +3,6 @@ package com.example.mykotlinapp
 import android.content.Intent
 import android.os.Bundle
 import android.speech.RecognizerIntent
-import android.util.Log
-import android.widget.Button
 import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
@@ -35,7 +33,7 @@ class Quiz : AppCompatActivity() {
         val storyId = intent.getStringExtra("story_id") ?: return
 
         // import dari QuizRepository untuk ambil quiz yg ingin di-display sesuai dengan story_idnya
-        quizData = QuizRepository.getQuizData(storyId)
+        quizData = quizRepository.getQuizData(storyId)
 
         // tampilin view quiznya dari sini, kalau ingin diganti bisa dari quiz_activity.xml
         questionTv = findViewById(R.id.question_tv)
@@ -107,14 +105,14 @@ class Quiz : AppCompatActivity() {
             Toast.makeText(this, "Nice One!", Toast.LENGTH_SHORT).show()
             proceedToNextQuestion()
         } else {
-            val wrongAnswerData = WrongAnswerRepository.getWrongAnswer(
+            val wrongAnswerData = wrongAnswerRepository.getWrongAnswer(
                 storyId = intent.getStringExtra("story_id") ?: "",
                 questionIndex = currentQuestionIndex,
                 selectedAnswer = spokenText
             )
 
             wrongAnswerData?.let { data ->
-                val intent = Intent(this, WrongAnswer::class.java).apply {
+                val intent = Intent(this, wrongAnswer::class.java).apply {
                     putExtra("explanation", data.explanation)
                     putExtra("imageResId", data.imageResId)
                     putExtra("description", data.description)

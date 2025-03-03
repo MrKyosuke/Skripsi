@@ -49,14 +49,14 @@
         android:clipToPadding="true">
 
         <ImageButton
-            android:id="@+id/button_turtle"
+            android:id="@+id/button_bawang"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:adjustViewBounds="true"
             android:background="@null"
             android:contentDescription="Go to Easy Story"
             android:scaleType="centerCrop"
-            android:src="@drawable/turtle_rabbit" />
+            android:src="@drawable/bawang_story" />
     </androidx.cardview.widget.CardView>
 
     <TextView
@@ -86,14 +86,14 @@
         android:clipToPadding="true">
 
         <ImageButton
-            android:id="@+id/button_shepherd"
+            android:id="@+id/button_malin"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:adjustViewBounds="true"
             android:background="@null"
             android:contentDescription="Go to Easy Story"
             android:scaleType="centerCrop"
-            android:src="@drawable/fox_story" />
+            android:src="@drawable/mk_title" />
     </androidx.cardview.widget.CardView>
 
     <TextView
