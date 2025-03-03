@@ -1,101 +1,95 @@
 package com.example.mykotlinapp
 
-import android.Manifest
 import android.content.Intent
-import android.content.pm.PackageManager
 import android.os.Bundle
-import android.speech.RecognitionListener
-import android.speech.RecognizerIntent
-import android.speech.SpeechRecognizer
+import android.speech.tts.TextToSpeech
 import android.util.Log
 import android.view.View
 import android.widget.Button
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.app.ActivityCompat
-import androidx.core.content.ContextCompat
 import androidx.viewpager2.widget.ViewPager2
-import com.example.interactivestorytellingapp.storyFragment
 import com.example.interactivestorytellingapp.storyPage
-import com.example.interactivestorytellingapp.storyPagerAdapter
-import android.speech.tts.TextToSpeech
+import com.example.interactivestorytellingapp.storyPagerAdapterEasy
+import com.example.mykotlinapp.easyQuiz
+import quizRepository
 import java.util.Locale
 
-
 class malinKundangEasy : AppCompatActivity() {
-
     private lateinit var viewPager: ViewPager2
-    private lateinit var buttonMic: Button
+    private lateinit var adapter: storyPagerAdapterEasy
     private lateinit var buttonStartQuiz: Button
     private lateinit var storySegments: List<storyPage>
-    private lateinit var speechRecognizer: SpeechRecognizer
-    private lateinit var speechIntent: Intent
-    private lateinit var paragraphProgress: MutableList<MutableList<Boolean>>
     private lateinit var textToSpeech: TextToSpeech
-
-    companion object {
-        private const val RECORD_AUDIO_REQUEST_CODE = 200
-    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_main_easy)
+
         buttonStartQuiz = findViewById(R.id.button_start_quiz)
+        viewPager = findViewById(R.id.viewPager)
+
+        // ✅ Hide button initially
         buttonStartQuiz.visibility = View.GONE
 
-        // ✅ Initialize storySegments first
+        // ✅ Initialize storySegments
         storySegments = listOf(
             storyPage(R.drawable.poor_fisherman, listOf(
-                "A long time ago, in a small coastal village, there lived a poor widow and her son, Malin Kundang.",
-                "They lived in a simple hut, and Malin Kundang helped his mother by collecting firewood and fishing by the shore.",
-                "Though they were poor, his mother loved him dearly and worked hard to provide for him.")
+                "A long time ago, Malin Kundang lived with his mother in a small village.",
+                "They were poor, but his mother loved him very much.",)
             ),
             storyPage(R.drawable.malin_leave, listOf(
-                "As Malin grew older, he dreamed of a better life.",
-                "One day, a large trading ship docked at the village, and Malin Kundang saw an opportunity.",
-                "Despite his mother’s worries, he promised to return after becoming rich.",
-                "With hope in his heart, he boarded the ship and sailed away, leaving his mother behind.")
+                "One day, a big ship came to the village.",
+                "Malin saw a chance to be rich.",
+                "He promised to return and left his mother behind.")
             ),
             storyPage(R.drawable.success_merc, listOf(
-                "Years passed, and Malin Kundang worked hard on the ship.",
-                "He eventually became a wealthy merchant and married a noblewoman.",
-                "However, as he gained wealth and status, he forgot about his humble past and the mother who had raised him.")
+                "Malin worked hard and became very rich.",
+                "He married a noblewoman and forgot about his mother.",)
             ),
             storyPage(R.drawable.happy_mom, listOf(
-                "One day, Malin Kundang’s grand ship arrived at his home village.",
-                "His mother, now old and frail, heard the news and rushed to the shore, filled with joy.",
-                "She called out to him, hoping to embrace her beloved son once more.")
+                "One day, his ship came back.",
+                "His mother was so happy! She ran to the shore, calling his name.",)
             ),
             storyPage(R.drawable.rejection, listOf(
-                "But Malin Kundang, ashamed of his past, refused to acknowledge his mother.",
-                "In front of his wife and crew, he denied knowing her.",
-                "His mother begged him, tears streaming down her face, but he turned away, embarrassed and angry.")
+                "But Malin was ashamed.",
+                "He told his wife he didn’t know his mother.",
+                "His mother cried and begged, but Malin turned away.")
             ),
             storyPage(R.drawable.curse, listOf(
-                "Heartbroken, Malin Kundang’s mother fell to her knees and prayed to the heavens.",
-                "She cursed her ungrateful son, calling upon the sea and sky to punish him for his arrogance and betrayal.")
+                "His mother was heartbroken.",
+                "She prayed to the sky, asking for punishment for Malin’s cruelty.",)
             ),
             storyPage(R.drawable.the_punishment, listOf(
-                "As Malin Kundang’s ship sailed away, dark clouds gathered, and the sea roared.",
-                "A powerful storm struck, and lightning turned him into stone.",
-                "To this day, a rock shaped like a kneeling man can be seen on the shore, a reminder of Malin Kundang’s fate")
+                "A big storm came.",
+                "The sea was angry.",
+                "Malin’s ship was struck by lightning, and he turned into stone.")
             )
         )
+        adapter = storyPagerAdapterEasy(
+            this,
+            storySegments,
+            showReadAloudButton = true,
+            onReadAloudClick = { text -> speakText(text) }
+        )
+        viewPager.adapter = adapter
 
-        // ✅ Now it is safe to access storySegments
-        storySegments.forEachIndexed { index, page ->
-            page.paragraphs.forEach { paragraph ->
-                println("Page $index: $paragraph")
+        // ✅ Show quiz button only on the last page
+        viewPager.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
+            override fun onPageSelected(position: Int) {
+                super.onPageSelected(position)
+                buttonStartQuiz.visibility = if (position == storySegments.size - 1) View.VISIBLE else View.GONE
             }
+        })
+
+        // ✅ Handle quiz button click (Replace `QuizActivity::class.java` with your actual quiz activity)
+        buttonStartQuiz.setOnClickListener {
+            val intent = Intent(this@malinKundangEasy, easyQuiz::class.java)
+            intent.putExtra("story_id", "malin_kundang_easy") // Pass the story ID
+            startActivity(intent)
+
         }
 
-        viewPager = findViewById(R.id.viewPager)
-        buttonMic = findViewById(R.id.button_mic)
-        buttonStartQuiz = findViewById(R.id.button_start_quiz)
-
-        // ✅ Initialize paragraph progress tracking
-        paragraphProgress = storySegments.map { page -> MutableList(page.paragraphs.size) { false } }.toMutableList()
-
+        // ✅ Initialize Text-to-Speech
         textToSpeech = TextToSpeech(this) { status ->
             if (status == TextToSpeech.SUCCESS) {
                 val result = textToSpeech.setLanguage(Locale.ENGLISH)
@@ -108,185 +102,6 @@ class malinKundangEasy : AppCompatActivity() {
                 Log.e("TTS", "Text-to-Speech initialization failed")
             }
         }
-
-        //untuk progress user tidak hilang kalaupun ke next page
-        val adapter = storyPagerAdapter(
-            this,
-            storySegments,
-            showReadAloudButton = true,
-            onReadAloudClick = { text -> speakText(text) },
-            getParagraphProgress = { pageIndex -> paragraphProgress[pageIndex] } // Pass stored progress
-        )
-        viewPager.adapter = adapter
-
-        buttonStartQuiz.visibility = View.GONE
-        viewPager.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
-            override fun onPageSelected(position: Int) {
-                super.onPageSelected(position)
-                if (position == storySegments.size - 1) {
-                    checkAllParagraphsCompletion()
-                }
-            }
-        })
-
-        if (ContextCompat.checkSelfPermission(this, Manifest.permission.RECORD_AUDIO) != PackageManager.PERMISSION_GRANTED) {
-            ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.RECORD_AUDIO), RECORD_AUDIO_REQUEST_CODE)
-        } else {
-            initializeSpeechRecognizer()
-        }
-
-        buttonMic.setOnClickListener {
-            if (ContextCompat.checkSelfPermission(this, Manifest.permission.RECORD_AUDIO) == PackageManager.PERMISSION_GRANTED) {
-                startListening()
-            } else {
-                Toast.makeText(this, "Please enable microphone permission", Toast.LENGTH_SHORT).show()
-            }
-        }
-
-        buttonStartQuiz.setOnClickListener {
-            val intent = Intent(this@malinKundangEasy, Quiz::class.java)
-            intent.putExtra("story_id", "bawang_merah")
-            startActivity(intent)
-            finish()
-        }
-    }
-
-    private fun initializeSpeechRecognizer() {
-        speechRecognizer = SpeechRecognizer.createSpeechRecognizer(this)
-        speechIntent = Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH).apply {
-            putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL, RecognizerIntent.LANGUAGE_MODEL_FREE_FORM)
-            putExtra(RecognizerIntent.EXTRA_LANGUAGE, Locale.ENGLISH)
-            putExtra(RecognizerIntent.EXTRA_PROMPT, "Read the text !")
-        }
-
-        speechRecognizer.setRecognitionListener(object : RecognitionListener {
-            override fun onReadyForSpeech(params: Bundle?) {
-                Toast.makeText(this@malinKundangEasy, "Listening...", Toast.LENGTH_SHORT).show()
-            }
-
-            override fun onBeginningOfSpeech() {}
-
-            override fun onRmsChanged(rmsdB: Float) {}
-
-            override fun onBufferReceived(buffer: ByteArray?) {}
-
-            override fun onEndOfSpeech() {
-                Toast.makeText(this@malinKundangEasy, "Processing...", Toast.LENGTH_SHORT).show()
-            }
-
-            override fun onError(error: Int) {
-                val errorMessage = getErrorText(error)
-                Toast.makeText(this@malinKundangEasy, "Error: $errorMessage", Toast.LENGTH_SHORT).show()
-            }
-
-            override fun onResults(results: Bundle?) {
-                val matches = results?.getStringArrayList(SpeechRecognizer.RESULTS_RECOGNITION)
-                val spokenText = matches?.get(0)?.trim() ?: return
-                val currentPage = viewPager.currentItem
-                val paragraphs = storySegments[currentPage].paragraphs
-
-                for (i in paragraphs.indices) {
-                    if (!paragraphProgress[currentPage][i] && isSpeechMatching(spokenText, paragraphs[i])) {
-                        paragraphProgress[currentPage][i] = true
-                        Log.d("SpeechRecognition", "Paragraph $i on page $currentPage marked as read: ${paragraphProgress[currentPage]}")
-                        showCheckmark(currentPage, i)
-                        checkPageCompletion()
-                        checkAllParagraphsCompletion()
-                        return
-                    }
-                }
-                Toast.makeText(this@malinKundangEasy, "Try again! Read it clearly.", Toast.LENGTH_SHORT).show()
-            }
-
-
-            override fun onPartialResults(partialResults: Bundle?) {}
-
-            override fun onEvent(eventType: Int, params: Bundle?) {}
-        })
-    }
-
-    private fun startListening() {
-        if (!SpeechRecognizer.isRecognitionAvailable(this)) {
-            Toast.makeText(this, "Speech Recognition is not available", Toast.LENGTH_LONG).show()
-            return
-        }
-        speechRecognizer.startListening(speechIntent)
-    }
-
-    private fun isSpeechMatching(spokenText: String, expectedText: String): Boolean {
-        val spokenWords = spokenText.lowercase(Locale.getDefault()).split(" ")
-        val expectedWords = expectedText.lowercase(Locale.getDefault()).split(" ")
-        val matchCount = spokenWords.count { it in expectedWords }
-        return matchCount >= expectedWords.size * 0.4
-    }
-
-    private fun moveToNextPage() {
-        val nextPage = viewPager.currentItem + 1
-
-        // ✅ Debugging Log
-        Log.d("StoryNavigation", "Moving from page ${viewPager.currentItem} to page $nextPage")
-
-        if (nextPage < storySegments.size) {
-            viewPager.setCurrentItem(nextPage, true)
-        } else {
-            Log.d("StoryNavigation", "Reached last page, transitioning to quiz")
-            val intent = Intent(this, Quiz::class.java)
-            intent.putExtra("story_id", "bawang_merah")
-            startActivity(intent)
-            finish()
-        }
-    }
-
-    //untuk liat errornya dimana aja, jadi bisa di-display error messagenya
-    private fun getErrorText(errorCode: Int): String {
-        return when (errorCode) {
-            SpeechRecognizer.ERROR_NETWORK_TIMEOUT -> "Network timeout"
-            SpeechRecognizer.ERROR_NETWORK -> "Network error"
-            SpeechRecognizer.ERROR_AUDIO -> "Audio recording error"
-            SpeechRecognizer.ERROR_SERVER -> "Server error"
-            SpeechRecognizer.ERROR_CLIENT -> "Client error"
-            SpeechRecognizer.ERROR_SPEECH_TIMEOUT -> "No speech input"
-            SpeechRecognizer.ERROR_NO_MATCH -> "No matching speech"
-            SpeechRecognizer.ERROR_RECOGNIZER_BUSY -> "Recognizer is busy"
-            SpeechRecognizer.ERROR_INSUFFICIENT_PERMISSIONS -> "Insufficient permissions"
-            else -> "Unknown error"
-        }
-    }
-
-    private fun checkPageCompletion() {
-        val currentPage = viewPager.currentItem
-
-        // ✅ Debugging Log
-        Log.d("PageCompletion", "Checking page $currentPage - Progress: ${paragraphProgress[currentPage]}")
-
-        if (paragraphProgress[currentPage].all { it }) {
-            Log.d("PageCompletion", "All paragraphs completed on page $currentPage")
-            moveToNextPage()
-        }
-        checkAllParagraphsCompletion()
-    }
-
-    private fun checkAllParagraphsCompletion() {
-        val allRead = paragraphProgress.all { pageProgress -> pageProgress.all { it } } // ✅ Check all pages
-
-        if (allRead) {
-            Log.d("StoryProgress", "All paragraphs in the story have been read.")
-            buttonStartQuiz.visibility = View.VISIBLE // ✅ Show Quiz button
-        } else {
-            buttonStartQuiz.visibility = View.GONE // ✅ Hide Quiz button until all are read
-        }
-    }
-
-    private fun showCheckmark(pageIndex: Int, paragraphIndex: Int) {
-        val adapter = viewPager.adapter as? storyPagerAdapter
-        val fragment = supportFragmentManager.findFragmentByTag("f$pageIndex") as? storyFragment
-
-        if (fragment != null) {
-            fragment.markParagraphAsRead(paragraphIndex)
-            Log.d("Checkmark", "Marked paragraph $paragraphIndex on page $pageIndex")
-        } else {
-            Log.e("Checkmark", "Could not find fragment for page $pageIndex")
-        }
     }
 
     private fun speakText(text: String) {
@@ -297,7 +112,6 @@ class malinKundangEasy : AppCompatActivity() {
 
     override fun onDestroy() {
         super.onDestroy()
-        speechRecognizer.destroy()
         if (::textToSpeech.isInitialized) {
             textToSpeech.stop()
             textToSpeech.shutdown()

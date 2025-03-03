@@ -66,6 +66,9 @@
             android:name=".bawangMerahEasy"
             android:exported="true" />
         <activity
+            android:name=".malinKundangEasy"
+            android:exported="true" />
+        <activity
             android:name=".easyQuiz"
             android:exported="true" />
     </application>

@@ -80,6 +80,9 @@
             android:name="com.example.mykotlinapp.bawangMerahEasy"
             android:exported="true" />
         <activity
+            android:name="com.example.mykotlinapp.malinKundangEasy"
+            android:exported="true" />
+        <activity
             android:name="com.example.mykotlinapp.easyQuiz"
             android:exported="true" />
 

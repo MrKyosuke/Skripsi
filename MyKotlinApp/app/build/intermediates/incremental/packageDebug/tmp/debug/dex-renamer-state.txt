@@ -1,4 +1,4 @@
-#Mon Mar 03 17:06:27 WIB 2025
+#Mon Mar 03 19:46:32 WIB 2025
 base.0=C\:\\Users\\Ken\\AndroidStudioProjects\\Skripsi\\MyKotlinApp\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
 base.1=C\:\\Users\\Ken\\AndroidStudioProjects\\Skripsi\\MyKotlinApp\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
 base.2=C\:\\Users\\Ken\\AndroidStudioProjects\\Skripsi\\MyKotlinApp\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\4\\classes.dex

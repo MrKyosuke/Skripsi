@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\Ken\AndroidStudioProjects\Skripsi\MyKotlinApp\app\src\main\AndroidManifest.xml:2:1-73:12
-INJECTED from C:\Users\Ken\AndroidStudioProjects\Skripsi\MyKotlinApp\app\src\main\AndroidManifest.xml:2:1-73:12
-INJECTED from C:\Users\Ken\AndroidStudioProjects\Skripsi\MyKotlinApp\app\src\main\AndroidManifest.xml:2:1-73:12
-INJECTED from C:\Users\Ken\AndroidStudioProjects\Skripsi\MyKotlinApp\app\src\main\AndroidManifest.xml:2:1-73:12
+ADDED from C:\Users\Ken\AndroidStudioProjects\Skripsi\MyKotlinApp\app\src\main\AndroidManifest.xml:2:1-76:12
+INJECTED from C:\Users\Ken\AndroidStudioProjects\Skripsi\MyKotlinApp\app\src\main\AndroidManifest.xml:2:1-76:12
+INJECTED from C:\Users\Ken\AndroidStudioProjects\Skripsi\MyKotlinApp\app\src\main\AndroidManifest.xml:2:1-76:12
+INJECTED from C:\Users\Ken\AndroidStudioProjects\Skripsi\MyKotlinApp\app\src\main\AndroidManifest.xml:2:1-76:12
 MERGED from [com.google.android.material:material:1.12.0] C:\Users\Ken\.gradle\caches\transforms-4\4ed3d082c40ca564d8646d8a4cd9eaae\transformed\material-1.12.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\Ken\.gradle\caches\transforms-4\0b85ffdc262bd41279ef498d1d7c69fc\transformed\constraintlayout-2.1.4\AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.appcompat:appcompat-resources:1.7.0] C:\Users\Ken\.gradle\caches\transforms-4\195f580ed0374a503594e1076b2021ee\transformed\appcompat-resources-1.7.0\AndroidManifest.xml:2:1-7:12
@@ -64,8 +64,8 @@ ADDED from C:\Users\Ken\AndroidStudioProjects\Skripsi\MyKotlinApp\app\src\main\A
 	android:name
 		ADDED from C:\Users\Ken\AndroidStudioProjects\Skripsi\MyKotlinApp\app\src\main\AndroidManifest.xml:6:22-68
 application
-ADDED from C:\Users\Ken\AndroidStudioProjects\Skripsi\MyKotlinApp\app\src\main\AndroidManifest.xml:8:5-71:19
-INJECTED from C:\Users\Ken\AndroidStudioProjects\Skripsi\MyKotlinApp\app\src\main\AndroidManifest.xml:8:5-71:19
+ADDED from C:\Users\Ken\AndroidStudioProjects\Skripsi\MyKotlinApp\app\src\main\AndroidManifest.xml:8:5-74:19
+INJECTED from C:\Users\Ken\AndroidStudioProjects\Skripsi\MyKotlinApp\app\src\main\AndroidManifest.xml:8:5-74:19
 MERGED from [com.google.android.material:material:1.12.0] C:\Users\Ken\.gradle\caches\transforms-4\4ed3d082c40ca564d8646d8a4cd9eaae\transformed\material-1.12.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.12.0] C:\Users\Ken\.gradle\caches\transforms-4\4ed3d082c40ca564d8646d8a4cd9eaae\transformed\material-1.12.0\AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\Ken\.gradle\caches\transforms-4\0b85ffdc262bd41279ef498d1d7c69fc\transformed\constraintlayout-2.1.4\AndroidManifest.xml:9:5-20
@@ -198,12 +198,18 @@ ADDED from C:\Users\Ken\AndroidStudioProjects\Skripsi\MyKotlinApp\app\src\main\A
 		ADDED from C:\Users\Ken\AndroidStudioProjects\Skripsi\MyKotlinApp\app\src\main\AndroidManifest.xml:67:13-36
 	android:name
 		ADDED from C:\Users\Ken\AndroidStudioProjects\Skripsi\MyKotlinApp\app\src\main\AndroidManifest.xml:66:13-44
-activity#com.example.mykotlinapp.easyQuiz
+activity#com.example.mykotlinapp.malinKundangEasy
 ADDED from C:\Users\Ken\AndroidStudioProjects\Skripsi\MyKotlinApp\app\src\main\AndroidManifest.xml:68:9-70:39
 	android:exported
 		ADDED from C:\Users\Ken\AndroidStudioProjects\Skripsi\MyKotlinApp\app\src\main\AndroidManifest.xml:70:13-36
 	android:name
-		ADDED from C:\Users\Ken\AndroidStudioProjects\Skripsi\MyKotlinApp\app\src\main\AndroidManifest.xml:69:13-37
+		ADDED from C:\Users\Ken\AndroidStudioProjects\Skripsi\MyKotlinApp\app\src\main\AndroidManifest.xml:69:13-45
+activity#com.example.mykotlinapp.easyQuiz
+ADDED from C:\Users\Ken\AndroidStudioProjects\Skripsi\MyKotlinApp\app\src\main\AndroidManifest.xml:71:9-73:39
+	android:exported
+		ADDED from C:\Users\Ken\AndroidStudioProjects\Skripsi\MyKotlinApp\app\src\main\AndroidManifest.xml:73:13-36
+	android:name
+		ADDED from C:\Users\Ken\AndroidStudioProjects\Skripsi\MyKotlinApp\app\src\main\AndroidManifest.xml:72:13-37
 uses-sdk
 INJECTED from C:\Users\Ken\AndroidStudioProjects\Skripsi\MyKotlinApp\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\Ken\AndroidStudioProjects\Skripsi\MyKotlinApp\app\src\main\AndroidManifest.xml
