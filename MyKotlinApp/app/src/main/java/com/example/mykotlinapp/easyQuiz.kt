@@ -21,7 +21,7 @@ class easyQuiz : AppCompatActivity() {
     private lateinit var answerAImage: ImageView
     private lateinit var answerBImage: ImageView
 
-    private lateinit var quizData: QuizData
+    private lateinit var quizData: QuizDataEasy
     private var currentQuestionIndex = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -35,9 +35,8 @@ class easyQuiz : AppCompatActivity() {
             return
         }
 
-        // Get quiz data
-        quizData = quizRepository.getQuizData(storyId)
-        if (quizData.questions.isEmpty()) {
+        // Retrieve correct quiz data
+        quizData = quizRepository.getEasyQuizData(storyId) ?: run {
             Toast.makeText(this, "No quiz data available!", Toast.LENGTH_SHORT).show()
             finish()
             return
@@ -78,8 +77,6 @@ class easyQuiz : AppCompatActivity() {
         }
     }
 
-
-
     private fun promptForSpeech() {
         val intent = Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH)
         intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL, RecognizerIntent.LANGUAGE_MODEL_FREE_FORM)
@@ -113,7 +110,7 @@ class easyQuiz : AppCompatActivity() {
         // Navigate to the Story Selection Menu
         val intent = Intent(this, easyLevel::class.java)
         startActivity(intent)
-        finish() // Ensure to finish the quiz activity after navigating
+        finish()
     }
 
     private fun proceedToNextQuestion() {

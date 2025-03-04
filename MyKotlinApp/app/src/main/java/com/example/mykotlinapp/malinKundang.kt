@@ -41,7 +41,7 @@ class malinKundang : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         buttonStartQuiz = findViewById(R.id.button_start_quiz)
-        buttonStartQuiz.visibility = View.GONE
+        buttonStartQuiz.visibility = View.VISIBLE
 
         // ✅ Initialize storySegments first
         storySegments = listOf(
@@ -76,7 +76,7 @@ class malinKundang : AppCompatActivity() {
                 "She cursed her ungrateful son, calling upon the sea and sky to punish him for his arrogance and betrayal.")
             ),
             storyPage(R.drawable.the_punishment, listOf(
-                "As Malin Kundang’s ship sailed away, dark clouds gathered, and the sea roared.",
+                "As Malin Kundang's ship left, the sky turned dark, and the sea became rough.",
                 "A powerful storm struck, and lightning turned him into stone.",
                 "To this day, a rock shaped like a kneeling man can be seen on the shore, a reminder of Malin Kundang’s fate")
             )
@@ -113,13 +113,13 @@ class malinKundang : AppCompatActivity() {
         val adapter = storyPagerAdapter(
             this,
             storySegments,
-            showReadAloudButton = true,
+            showReadAloudButton = false,
             onReadAloudClick = { text -> speakText(text) },
             getParagraphProgress = { pageIndex -> paragraphProgress[pageIndex] } // Pass stored progress
         )
         viewPager.adapter = adapter
 
-        buttonStartQuiz.visibility = View.GONE
+        buttonStartQuiz.visibility = View.VISIBLE
         viewPager.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
             override fun onPageSelected(position: Int) {
                 super.onPageSelected(position)
@@ -145,7 +145,7 @@ class malinKundang : AppCompatActivity() {
 
         buttonStartQuiz.setOnClickListener {
             val intent = Intent(this@malinKundang, Quiz::class.java)
-            intent.putExtra("story_id", "bawang_merah")
+            intent.putExtra("story_id", "malin_kundang")
             startActivity(intent)
             finish()
         }

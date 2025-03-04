@@ -36,37 +36,37 @@ class bawangMerahEasy : AppCompatActivity() {
             storyPage(R.drawable.village_scene, listOf(
                 "A long time ago, in a small village, lived a kind girl named Bawang Putih.",
                 "She had a loving father.",
-                "One day, her father married a woman who had a daughter, Bawang Merah.",
+                "One day, her father married a woman who had a daughter, Bawang Merah. ",
                 "After that, Bawang Putih had to do all the housework.")
             ),
             storyPage(R.drawable.incident, listOf(
                 "Bawang Putih’s father got very sick and passed away.",
-                "Her stepmother and Bawang Merah were mean to her.",
-                "They made her work all day and punished her for small mistakes.")
+                "Her stepmother and Bawang Merah were mean to her",
+                "They made her work all day and punished her for small mistakes")
             ),
             storyPage(R.drawable.lost_shawl, listOf(
-                "One day, while washing clothes, Bawang Putih lost her stepmother’s red shawl in the river.",
-                "She was scared and searched for it.",
+                "One day, while washing clothes, Bawang Putih lost her stepmother’s red shawl in the river",
+                "She was scared and searched for it",
                 "She met a kind old woman who had the shawl.")
             ),
             storyPage(R.drawable.pumpkin_gift, listOf(
-                "The old woman asked Bawang Putih to help her with chores before giving back the shawl.",
-                "After helping, Bawang Putih got to choose a small or big pumpkin.",
-                "She picked the small one.")
+                "The grandmother agreed to return the shawl but asked Bawang Putih to help with her chores first.",
+                "After helping, the grandmother offered her a reward either a large or small pumpkin.",
+                "Bawang Putih chose the small pumpkin and, following the grandmother's advice, waited until she got home to open it.")
             ),
             storyPage(R.drawable.treasure, listOf(
-                "At home, her stepmother was angry.",
-                "But when Bawang Putih opened the pumpkin, it was full of shiny jewels!",
-                "Her stepmother and Bawang Merah became jealous.")
+                "At home, Bawang Putih’s stepmother and Bawang Merah were furious with her.",
+                "But when Bawang Putih cut open the small pumpkin, they were shocked to find it filled with sparkling jewels.",
+                "The stepmother and Bawang Merah were jealous and wanted to get more jewels for themselves.")
             ),
             storyPage(R.drawable.false_pumpkin, listOf(
-                "The next day, Bawang Merah tried the same thing",
-                "She helped the old woman and took the biggest pumpkin.",
-                "But she and her mother opened it too soon.")
+                "The next day, Bawang Merah and her mother went to the river, hoping to repeat Bawang Putih’s good fortune.",
+                "They followed the same steps, helping the grandmother and choosing the biggest pumpkin.",
+                "However, on their way home, they greedily opened the pumpkin too early.")
             ),
             storyPage(R.drawable.punishment, listOf(
-                "The pumpkin had snakes and scorpions! They ran away in fear.",
-                "Bawang Putih lived happily with her father’s business and her new treasures.")
+                "To their horror, the pumpkin was filled with venomous creatures like snakes and scorpions.",
+                "Both Bawang Merah and her mother died because of their greed, while Bawang Putih lived happily, continuing her father’s business and enjoying her wealth.")
             )
         )
 

@@ -9,6 +9,7 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import android.view.View
+import quizRepository
 
 class Quiz : AppCompatActivity() {
 
@@ -33,7 +34,7 @@ class Quiz : AppCompatActivity() {
         val storyId = intent.getStringExtra("story_id") ?: return
 
         // import dari QuizRepository untuk ambil quiz yg ingin di-display sesuai dengan story_idnya
-        quizData = quizRepository.getQuizData(storyId)
+        quizData = quizRepository.getQuizData(storyId) as QuizData
 
         // tampilin view quiznya dari sini, kalau ingin diganti bisa dari quiz_activity.xml
         questionTv = findViewById(R.id.question_tv)
@@ -101,7 +102,7 @@ class Quiz : AppCompatActivity() {
         val answers = currentQuestion.answers.map { it.lowercase() }
 
         val correctAnswerIndex = currentQuestion.correctAnswerIndex
-        if (spokenText.contains(answers[correctAnswerIndex])) {
+        if (answers.any { spokenText.contains(it) }) {  // More flexible match
             Toast.makeText(this, "Nice One!", Toast.LENGTH_SHORT).show()
             proceedToNextQuestion()
         } else {
@@ -118,11 +119,11 @@ class Quiz : AppCompatActivity() {
                     putExtra("description", data.description)
                 }
                 startActivity(intent)
+            } ?: run {
+                Toast.makeText(this, "Wrong answer but no explanation found.", Toast.LENGTH_SHORT).show()
             }
         }
     }
-
-    // ✅ Now it's outside `checkAnswer()` and can be accessed globally in the class
     private fun proceedToNextQuestion() {
         currentQuestionIndex++
 

@@ -11,7 +11,6 @@ class Level : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.level_activity)
 
-        // Easy Level
         findViewById<CardView>(R.id.card_easy).setOnClickListener {
             val intent = Intent(this, easyLevel::class.java)
             startActivity(intent)
