@@ -10,4 +10,3 @@ class hardLevel : AppCompatActivity() {
         // Add functionality for Easy Level here
     }
 }
-

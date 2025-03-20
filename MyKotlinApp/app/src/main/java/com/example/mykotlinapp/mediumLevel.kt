@@ -32,4 +32,3 @@ class mediumLevel : AppCompatActivity() {
         }
     }
 }
-

@@ -51,9 +51,6 @@
             android:name=".malinKundang"
             android:exported="true" />
         <activity
-            android:name=".shepherdStory"
-            android:exported="true" />
-        <activity
             android:name=".wrongAnswer"
             android:exported="true" />
         <activity

@@ -11,7 +11,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import java.util.Locale
 
-class secondActivity : AppCompatActivity(), View.OnClickListener {
+class SecondActivity : AppCompatActivity(), View.OnClickListener {
     private val REQUEST_CODE_SPEECH_INPUT = 102
 
     // Quiz elements
