@@ -82,7 +82,6 @@ class malinKundang : AppCompatActivity() {
             )
         )
 
-        // ✅ Now it is safe to access storySegments
         storySegments.forEachIndexed { index, page ->
             page.paragraphs.forEach { paragraph ->
                 println("Page $index: $paragraph")
@@ -93,7 +92,6 @@ class malinKundang : AppCompatActivity() {
         buttonMic = findViewById(R.id.button_mic)
         buttonStartQuiz = findViewById(R.id.button_start_quiz)
 
-        // ✅ Initialize paragraph progress tracking
         paragraphProgress = storySegments.map { page -> MutableList(page.paragraphs.size) { false } }.toMutableList()
 
         textToSpeech = TextToSpeech(this) { status ->
@@ -109,7 +107,6 @@ class malinKundang : AppCompatActivity() {
             }
         }
 
-        //untuk progress user tidak hilang kalaupun ke next page
         val adapter = storyPagerAdapter(
             this,
             storySegments,
@@ -223,7 +220,6 @@ class malinKundang : AppCompatActivity() {
     private fun moveToNextPage() {
         val nextPage = viewPager.currentItem + 1
 
-        // ✅ Debugging Log
         Log.d("StoryNavigation", "Moving from page ${viewPager.currentItem} to page $nextPage")
 
         if (nextPage < storySegments.size) {
@@ -236,8 +232,7 @@ class malinKundang : AppCompatActivity() {
             finish()
         }
     }
-
-    //untuk liat errornya dimana aja, jadi bisa di-display error messagenya
+    
     private fun getErrorText(errorCode: Int): String {
         return when (errorCode) {
             SpeechRecognizer.ERROR_NETWORK_TIMEOUT -> "Network timeout"

@@ -7,14 +7,13 @@ import com.example.mykotlinapp.R
 
 object quizRepository {
 
-    // Regular quizzes
     private val quizzes = mapOf(
         "bawang_merah" to QuizData(
             listOf(
                 QuizQuestion(
                     imageResId = R.drawable.incident,
                     question = "Why did Bawang Putih have to do all the chores at home?",
-                    answers = listOf("She wanted to help her family", "Her father told her to", "Her stepmother and stepsister forced her", "She lost a bet"),
+                    answers = listOf("She wanted to help her family", "Her father told her to", "Her stepmother and step sister forced her", "She lost a bet"),
                     correctAnswerIndex = 2
                 ),
                 QuizQuestion(
@@ -135,12 +134,10 @@ object quizRepository {
         )
     )
 
-    // Fetch quiz data based on story ID
     fun getQuizData(storyId: String): IQuizData? {
         return quizzes[storyId]
     }
 
-    // Fetch easy quiz data based on story ID
     fun getEasyQuizData(storyId: String): QuizDataEasy? {
         return easyQuizzes[storyId]
     }

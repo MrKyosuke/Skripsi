@@ -20,6 +20,6 @@ class storyPagerAdapterEasy(
             story.paragraphs,
             showReadAloudButton,
             onReadAloudClick
-        ) // No paragraph tracking in this version
+        )
     }
 }

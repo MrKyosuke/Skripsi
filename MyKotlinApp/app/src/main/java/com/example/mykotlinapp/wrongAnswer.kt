@@ -17,12 +17,10 @@ class wrongAnswer : AppCompatActivity() {
         val descriptionTextView = findViewById<TextView>(R.id.descriptionTextView)
         val backButton = findViewById<Button>(R.id.backButton)
 
-        // Retrieve data from intent
         val explanation = intent.getStringExtra("explanation") ?: "Incorrect answer."
         val description = intent.getStringExtra("description") ?: "Try again!"
         val imageResId = intent.getIntExtra("imageResId", 0)
 
-        // Set the data
         explanationTextView.text = explanation
         descriptionTextView.text = description
         wrongAnswerImageView.setImageResource(imageResId)

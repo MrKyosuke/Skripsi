@@ -23,7 +23,7 @@ class storyPagerAdapter(
             onReadAloudClick
         ).apply {
             restoreParagraphProgress(getParagraphProgress(position))
-        } // Pass as List<String>
+        }
     }
 
 

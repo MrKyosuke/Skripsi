@@ -1,15 +1,17 @@
 package com.example.mykotlinapp
 
+import android.util.Log
+
 object wrongAnswerRepositorMedium {
 
     data class WrongAnswerData(
-        val imageResId: Int,  // Drawable resource ID
+        val imageResId: Int,
         val explanation: String,
         val description: String
     )
 
     private val wrongAnswers = mapOf(
-        "bawangStory" to mapOf(
+        "bawang_merah" to mapOf(
             0 to mapOf(
                 "She wanted to help her family" to WrongAnswerData(
                     imageResId = R.drawable.try_again,
@@ -79,7 +81,7 @@ object wrongAnswerRepositorMedium {
                 )
             )
         ),
-        "malinStory" to mapOf(
+        "malin_kundang" to mapOf(
             0 to mapOf(
                 "He wanted to explore the world" to WrongAnswerData(
                     imageResId = R.drawable.try_again,
@@ -148,11 +150,120 @@ object wrongAnswerRepositorMedium {
                     description = "Wrong answer unfortunately! Please go back and try again!"
                 )
             )
+        ),
+        "malin_kundang_easy" to mapOf(
+            0 to mapOf(
+                "He wanted to explore the world" to WrongAnswerData(
+                    imageResId = R.drawable.try_again,
+                    explanation = "Incorrect! That is not Malin Kundang's reason to leave.",
+                    description = "Wrong answer unfortunately! Please go back and try again!"
+                ),
+                "He was forced to leave by the villagers" to WrongAnswerData(
+                    imageResId = R.drawable.try_again,
+                    explanation = "Incorrect! It was Malin Kundang's own will.",
+                    description = "Wrong answer unfortunately! Please go back and try again!"
+                ),
+                "His mother told him to leave" to WrongAnswerData(
+                    imageResId = R.drawable.try_again,
+                    explanation = "Incorrect! His mother did not tell him to leave.",
+                    description = "Wrong answer unfortunately! Please go back and try again!"
+                )
+            ),
+            1 to mapOf(
+                "Angry and disappointed" to WrongAnswerData(
+                    imageResId = R.drawable.try_again,
+                    explanation = "Incorrect! That is not how Malin Kundang's mother feel.",
+                    description = "Wrong answer unfortunately! Please go back and try again!"
+                ),
+                "Nervous and scared" to WrongAnswerData(
+                    imageResId = R.drawable.try_again,
+                    explanation = "Incorrect! That is not how Malin Kundang's mother feel.",
+                    description = "Wrong answer unfortunately! Please go back and try again!"
+                ),
+                "Indifferent and uninterested" to WrongAnswerData(
+                    imageResId = R.drawable.try_again,
+                    explanation = "Incorrect! That is not how Malin Kundang's mother feel.",
+                    description = "Wrong answer unfortunately! Please go back and try again!"
+                )
+            ),
+            2 to mapOf(
+                "He truly forgot about her" to WrongAnswerData(
+                    imageResId = R.drawable.try_again,
+                    explanation = "Incorrect! That is not Malin Kundang's reason.",
+                    description = "Wrong answer unfortunately! Please go back and try again!"
+                ),
+                "His wife told him to ignore her" to WrongAnswerData(
+                    imageResId = R.drawable.try_again,
+                    explanation = "Incorrect! His wife did not tell him to do that.",
+                    description = "Wrong answer unfortunately! Please go back and try again!"
+                ),
+                "He was in a hurry and didn’t see her" to WrongAnswerData(
+                    imageResId = R.drawable.try_again,
+                    explanation = "Incorrect! Malin Kundang did met his mother.",
+                    description = "Wrong answer unfortunately! Please go back and try again!"
+                )
+            ),
+            3 to mapOf(
+                "He became even richer" to WrongAnswerData(
+                    imageResId = R.drawable.try_again,
+                    explanation = "Incorrect! He did not become richer.",
+                    description = "Wrong answer unfortunately! Please go back and try again!"
+                ),
+                "He apologized to his mother" to WrongAnswerData(
+                    imageResId = R.drawable.try_again,
+                    explanation = "Incorrect! He did not apologize to his mother.",
+                    description = "Wrong answer unfortunately! Please go back and try again!"
+                ),
+                "He ran away to another village" to WrongAnswerData(
+                    imageResId = R.drawable.try_again,
+                    explanation = "Incorrect! He did not run to another village.",
+                    description = "Wrong answer unfortunately! Please go back and try again!"
+                )
+            )
+        ),
+        "bawang_merah_easy" to mapOf(
+            0 to mapOf(
+                "Right" to WrongAnswerData(
+                    imageResId = R.drawable.try_again,
+                    explanation = "Incorrect! That is not the kind-hearted one!",
+                    description = "Wrong answer unfortunately! Please go back and try again!"
+                )
+            ),
+            1 to mapOf(
+                "Right" to WrongAnswerData(
+                    imageResId = R.drawable.try_again,
+                    explanation = "Incorrect! That is not who she found while searching for the red shawl.",
+                    description = "Wrong answer unfortunately! Please go back and try again!"
+                )
+            ),
+            2 to mapOf(
+                "Left" to WrongAnswerData(
+                    imageResId = R.drawable.try_again,
+                    explanation = "Incorrect! That is not the reward she chose!",
+                    description = "Wrong answer unfortunately! Please go back and try again!"
+                )
+            ),
+            3 to mapOf(
+                "Right" to WrongAnswerData(
+                    imageResId = R.drawable.try_again,
+                    explanation = "Incorrect! That did not come out of the reward she opened.",
+                    description = "Wrong answer unfortunately! Please go back and try again!"
+                )
+            )
         )
+
     )
 
     fun getWrongAnswer(storyId: String, questionIndex: Int, selectedAnswer: String): WrongAnswerData? {
         val possibleAnswers = wrongAnswers[storyId]?.get(questionIndex)
-        return possibleAnswers?.entries?.find { it.key.lowercase() == selectedAnswer.lowercase() }?.value
+
+        Log.d("WrongAnswerRepo", "Story ID: $storyId, Question Index: $questionIndex, Selected Answer: '$selectedAnswer'")
+
+        possibleAnswers?.forEach { (key, value) ->
+            Log.d("WrongAnswerRepo", "Checking: '$key' vs '${selectedAnswer.trim().lowercase()}'")
+        }
+
+        return possibleAnswers?.entries?.find { it.key.trim().lowercase() == selectedAnswer.trim().lowercase() }?.value
     }
+
 }

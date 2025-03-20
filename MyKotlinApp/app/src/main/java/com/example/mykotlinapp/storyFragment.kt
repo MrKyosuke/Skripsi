@@ -30,7 +30,6 @@ class storyFragment : Fragment() {
     ): View? {
         val view = inflater.inflate(R.layout.fragment_story, container, false)
 
-        // ✅ Get references
         storyImageView = view.findViewById(R.id.storyImageView)
         val imageResId = arguments?.getInt("imageResId", 0)
         val showButton = arguments?.getBoolean("showButton", true) ?: true
@@ -38,14 +37,12 @@ class storyFragment : Fragment() {
 
         paragraphViews = mutableListOf()
 
-        // ✅ Ensure ImageView behaves correctly
         if (imageResId != null && imageResId != 0) {
             storyImageView.setImageResource(imageResId)
         } else {
             storyImageView.visibility = View.GONE
         }
 
-        // ✅ Dynamically add TextViews for each paragraph
         paragraphs?.forEachIndexed { index, text ->
             val textView = TextView(context).apply {
                 this.text = text
@@ -57,7 +54,6 @@ class storyFragment : Fragment() {
             paragraphViews.add(textView)  // Store reference for future updates
         }
 
-        // ✅ Read Aloud Button Handling
         val readAloudButton: Button = view.findViewById(R.id.btnReadAloud)
         readAloudButton.visibility = if (showButton) View.VISIBLE else View.GONE
         readAloudButton.setOnClickListener {
@@ -74,14 +70,14 @@ class storyFragment : Fragment() {
             imageResId: Int,
             paragraphs: List<String>,
             showButton: Boolean,
-            onReadAloudClick: (String) -> Unit  // ✅ Ensure callback is passed
+            onReadAloudClick: (String) -> Unit
         ) = storyFragment().apply {
             arguments = Bundle().apply {
                 putInt("imageResId", imageResId)
                 putStringArrayList(ARG_PARAGRAPHS, ArrayList(paragraphs))
                 putBoolean("showButton", showButton)
             }
-            this.onReadAloudClick = onReadAloudClick  // ✅ Assign callback
+            this.onReadAloudClick = onReadAloudClick
         }
     }
 
@@ -89,8 +85,8 @@ class storyFragment : Fragment() {
         activity?.runOnUiThread {
             if (paragraphIndex in paragraphViews.indices) {
                 val paragraphText = paragraphViews[paragraphIndex].text.toString()
-                paragraphViews[paragraphIndex].text = "$paragraphText ✅" // Add checkmark
-                paragraphViews[paragraphIndex].setTextColor(Color.GREEN) // Optional: Change color
+                paragraphViews[paragraphIndex].text = "$paragraphText"
+                paragraphViews[paragraphIndex].setTextColor(Color.GREEN)
             } else {
                 Log.e("StoryFragment", "Invalid paragraph index: $paragraphIndex")
             }
@@ -103,7 +99,7 @@ class storyFragment : Fragment() {
                 progress.forEachIndexed { index, isRead ->
                     if (isRead) {
                         val paragraphText = paragraphViews[index].text.toString()
-                        paragraphViews[index].text = "$paragraphText ✅"
+                        paragraphViews[index].text = "$paragraphText"
                         paragraphViews[index].setTextColor(Color.GREEN)
                     }
                 }
