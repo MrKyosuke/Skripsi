@@ -36,9 +36,6 @@
             android:name=".Level"
             android:exported="true" />
         <activity
-            android:name=".Settings"
-            android:exported="true" />
-        <activity
             android:name=".About"
             android:exported="true" />
         <activity

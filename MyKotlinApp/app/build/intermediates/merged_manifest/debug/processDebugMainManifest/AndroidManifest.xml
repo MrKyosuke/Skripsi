@@ -50,9 +50,6 @@
             android:name="com.example.mykotlinapp.Level"
             android:exported="true" />
         <activity
-            android:name="com.example.mykotlinapp.Settings"
-            android:exported="true" />
-        <activity
             android:name="com.example.mykotlinapp.About"
             android:exported="true" />
         <activity

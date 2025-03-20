@@ -48,6 +48,10 @@
         "source": "C:\\Users\\Ken\\.gradle\\daemon\\8.7\\com.example.mykotlinapp-main-33:\\layout\\activity_main.xml"
     },
     {
+        "merged": "C:\\Users\\Ken\\.gradle\\daemon\\8.7\\com.example.mykotlinapp-debug-31:\\drawable_try_again.jpg.flat",
+        "source": "C:\\Users\\Ken\\.gradle\\daemon\\8.7\\com.example.mykotlinapp-main-33:\\drawable\\try_again.jpg"
+    },
+    {
         "merged": "C:\\Users\\Ken\\.gradle\\daemon\\8.7\\com.example.mykotlinapp-debug-31:\\mipmap-hdpi_ic_first_story.webp.flat",
         "source": "C:\\Users\\Ken\\.gradle\\daemon\\8.7\\com.example.mykotlinapp-main-33:\\mipmap-hdpi\\ic_first_story.webp"
     },
@@ -152,6 +156,10 @@
         "source": "C:\\Users\\Ken\\.gradle\\daemon\\8.7\\com.example.mykotlinapp-main-33:\\drawable\\small_pumpkin.jpg"
     },
     {
+        "merged": "com.example.mykotlinapp-debug-31:/layout_dashboard.xml.flat",
+        "source": "com.example.mykotlinapp-main-33:/layout/dashboard.xml"
+    },
+    {
         "merged": "C:\\Users\\Ken\\.gradle\\daemon\\8.7\\com.example.mykotlinapp-debug-31:\\drawable_incident.png.flat",
         "source": "C:\\Users\\Ken\\.gradle\\daemon\\8.7\\com.example.mykotlinapp-main-33:\\drawable\\incident.png"
     },
@@ -228,10 +236,6 @@
         "source": "C:\\Users\\Ken\\.gradle\\daemon\\8.7\\com.example.mykotlinapp-main-33:\\drawable\\bawang_story.jpg"
     },
     {
-        "merged": "com.example.mykotlinapp-debug-31:/layout_activity_easy_level.xml.flat",
-        "source": "com.example.mykotlinapp-main-33:/layout/activity_easy_level.xml"
-    },
-    {
         "merged": "C:\\Users\\Ken\\.gradle\\daemon\\8.7\\com.example.mykotlinapp-debug-31:\\layout_activity_main_easy.xml.flat",
         "source": "C:\\Users\\Ken\\.gradle\\daemon\\8.7\\com.example.mykotlinapp-main-33:\\layout\\activity_main_easy.xml"
     },
@@ -260,12 +264,12 @@
         "source": "C:\\Users\\Ken\\.gradle\\daemon\\8.7\\com.example.mykotlinapp-main-33:\\mipmap-xxhdpi\\ic_first_story.webp"
     },
     {
-        "merged": "C:\\Users\\Ken\\.gradle\\daemon\\8.7\\com.example.mykotlinapp-debug-31:\\drawable_ic_home.xml.flat",
-        "source": "C:\\Users\\Ken\\.gradle\\daemon\\8.7\\com.example.mykotlinapp-main-33:\\drawable\\ic_home.xml"
-    },
-    {
         "merged": "C:\\Users\\Ken\\.gradle\\daemon\\8.7\\com.example.mykotlinapp-debug-31:\\drawable_big_pumpkin.jpg.flat",
         "source": "C:\\Users\\Ken\\.gradle\\daemon\\8.7\\com.example.mykotlinapp-main-33:\\drawable\\big_pumpkin.jpg"
+    },
+    {
+        "merged": "C:\\Users\\Ken\\.gradle\\daemon\\8.7\\com.example.mykotlinapp-debug-31:\\drawable_ic_home.xml.flat",
+        "source": "C:\\Users\\Ken\\.gradle\\daemon\\8.7\\com.example.mykotlinapp-main-33:\\drawable\\ic_home.xml"
     },
     {
         "merged": "C:\\Users\\Ken\\.gradle\\daemon\\8.7\\com.example.mykotlinapp-debug-31:\\mipmap-anydpi-v26_ic_launcher.xml.flat",

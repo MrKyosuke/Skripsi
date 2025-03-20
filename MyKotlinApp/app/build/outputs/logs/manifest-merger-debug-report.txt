@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\Ken\AndroidStudioProjects\Skripsi\MyKotlinApp\app\src\main\AndroidManifest.xml:2:1-76:12
-INJECTED from C:\Users\Ken\AndroidStudioProjects\Skripsi\MyKotlinApp\app\src\main\AndroidManifest.xml:2:1-76:12
-INJECTED from C:\Users\Ken\AndroidStudioProjects\Skripsi\MyKotlinApp\app\src\main\AndroidManifest.xml:2:1-76:12
-INJECTED from C:\Users\Ken\AndroidStudioProjects\Skripsi\MyKotlinApp\app\src\main\AndroidManifest.xml:2:1-76:12
+ADDED from C:\Users\Ken\AndroidStudioProjects\Skripsi\MyKotlinApp\app\src\main\AndroidManifest.xml:2:1-73:12
+INJECTED from C:\Users\Ken\AndroidStudioProjects\Skripsi\MyKotlinApp\app\src\main\AndroidManifest.xml:2:1-73:12
+INJECTED from C:\Users\Ken\AndroidStudioProjects\Skripsi\MyKotlinApp\app\src\main\AndroidManifest.xml:2:1-73:12
+INJECTED from C:\Users\Ken\AndroidStudioProjects\Skripsi\MyKotlinApp\app\src\main\AndroidManifest.xml:2:1-73:12
 MERGED from [com.google.android.material:material:1.12.0] C:\Users\Ken\.gradle\caches\transforms-4\4ed3d082c40ca564d8646d8a4cd9eaae\transformed\material-1.12.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\Ken\.gradle\caches\transforms-4\0b85ffdc262bd41279ef498d1d7c69fc\transformed\constraintlayout-2.1.4\AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.appcompat:appcompat-resources:1.7.0] C:\Users\Ken\.gradle\caches\transforms-4\195f580ed0374a503594e1076b2021ee\transformed\appcompat-resources-1.7.0\AndroidManifest.xml:2:1-7:12
@@ -64,8 +64,8 @@ ADDED from C:\Users\Ken\AndroidStudioProjects\Skripsi\MyKotlinApp\app\src\main\A
 	android:name
 		ADDED from C:\Users\Ken\AndroidStudioProjects\Skripsi\MyKotlinApp\app\src\main\AndroidManifest.xml:6:22-68
 application
-ADDED from C:\Users\Ken\AndroidStudioProjects\Skripsi\MyKotlinApp\app\src\main\AndroidManifest.xml:8:5-74:19
-INJECTED from C:\Users\Ken\AndroidStudioProjects\Skripsi\MyKotlinApp\app\src\main\AndroidManifest.xml:8:5-74:19
+ADDED from C:\Users\Ken\AndroidStudioProjects\Skripsi\MyKotlinApp\app\src\main\AndroidManifest.xml:8:5-71:19
+INJECTED from C:\Users\Ken\AndroidStudioProjects\Skripsi\MyKotlinApp\app\src\main\AndroidManifest.xml:8:5-71:19
 MERGED from [com.google.android.material:material:1.12.0] C:\Users\Ken\.gradle\caches\transforms-4\4ed3d082c40ca564d8646d8a4cd9eaae\transformed\material-1.12.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.12.0] C:\Users\Ken\.gradle\caches\transforms-4\4ed3d082c40ca564d8646d8a4cd9eaae\transformed\material-1.12.0\AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\Ken\.gradle\caches\transforms-4\0b85ffdc262bd41279ef498d1d7c69fc\transformed\constraintlayout-2.1.4\AndroidManifest.xml:9:5-20
@@ -138,78 +138,72 @@ ADDED from C:\Users\Ken\AndroidStudioProjects\Skripsi\MyKotlinApp\app\src\main\A
 		ADDED from C:\Users\Ken\AndroidStudioProjects\Skripsi\MyKotlinApp\app\src\main\AndroidManifest.xml:37:13-36
 	android:name
 		ADDED from C:\Users\Ken\AndroidStudioProjects\Skripsi\MyKotlinApp\app\src\main\AndroidManifest.xml:36:13-34
-activity#com.example.mykotlinapp.Settings
+activity#com.example.mykotlinapp.About
 ADDED from C:\Users\Ken\AndroidStudioProjects\Skripsi\MyKotlinApp\app\src\main\AndroidManifest.xml:38:9-40:39
 	android:exported
 		ADDED from C:\Users\Ken\AndroidStudioProjects\Skripsi\MyKotlinApp\app\src\main\AndroidManifest.xml:40:13-36
 	android:name
-		ADDED from C:\Users\Ken\AndroidStudioProjects\Skripsi\MyKotlinApp\app\src\main\AndroidManifest.xml:39:13-37
-activity#com.example.mykotlinapp.About
+		ADDED from C:\Users\Ken\AndroidStudioProjects\Skripsi\MyKotlinApp\app\src\main\AndroidManifest.xml:39:13-34
+activity#com.example.mykotlinapp.easyLevel
 ADDED from C:\Users\Ken\AndroidStudioProjects\Skripsi\MyKotlinApp\app\src\main\AndroidManifest.xml:41:9-43:39
 	android:exported
 		ADDED from C:\Users\Ken\AndroidStudioProjects\Skripsi\MyKotlinApp\app\src\main\AndroidManifest.xml:43:13-36
 	android:name
-		ADDED from C:\Users\Ken\AndroidStudioProjects\Skripsi\MyKotlinApp\app\src\main\AndroidManifest.xml:42:13-34
-activity#com.example.mykotlinapp.easyLevel
+		ADDED from C:\Users\Ken\AndroidStudioProjects\Skripsi\MyKotlinApp\app\src\main\AndroidManifest.xml:42:13-38
+activity#com.example.mykotlinapp.mediumLevel
 ADDED from C:\Users\Ken\AndroidStudioProjects\Skripsi\MyKotlinApp\app\src\main\AndroidManifest.xml:44:9-46:39
 	android:exported
 		ADDED from C:\Users\Ken\AndroidStudioProjects\Skripsi\MyKotlinApp\app\src\main\AndroidManifest.xml:46:13-36
 	android:name
-		ADDED from C:\Users\Ken\AndroidStudioProjects\Skripsi\MyKotlinApp\app\src\main\AndroidManifest.xml:45:13-38
-activity#com.example.mykotlinapp.mediumLevel
+		ADDED from C:\Users\Ken\AndroidStudioProjects\Skripsi\MyKotlinApp\app\src\main\AndroidManifest.xml:45:13-40
+activity#com.example.mykotlinapp.hardLevel
 ADDED from C:\Users\Ken\AndroidStudioProjects\Skripsi\MyKotlinApp\app\src\main\AndroidManifest.xml:47:9-49:39
 	android:exported
 		ADDED from C:\Users\Ken\AndroidStudioProjects\Skripsi\MyKotlinApp\app\src\main\AndroidManifest.xml:49:13-36
 	android:name
-		ADDED from C:\Users\Ken\AndroidStudioProjects\Skripsi\MyKotlinApp\app\src\main\AndroidManifest.xml:48:13-40
-activity#com.example.mykotlinapp.hardLevel
+		ADDED from C:\Users\Ken\AndroidStudioProjects\Skripsi\MyKotlinApp\app\src\main\AndroidManifest.xml:48:13-38
+activity#com.example.mykotlinapp.malinKundang
 ADDED from C:\Users\Ken\AndroidStudioProjects\Skripsi\MyKotlinApp\app\src\main\AndroidManifest.xml:50:9-52:39
 	android:exported
 		ADDED from C:\Users\Ken\AndroidStudioProjects\Skripsi\MyKotlinApp\app\src\main\AndroidManifest.xml:52:13-36
 	android:name
-		ADDED from C:\Users\Ken\AndroidStudioProjects\Skripsi\MyKotlinApp\app\src\main\AndroidManifest.xml:51:13-38
-activity#com.example.mykotlinapp.malinKundang
+		ADDED from C:\Users\Ken\AndroidStudioProjects\Skripsi\MyKotlinApp\app\src\main\AndroidManifest.xml:51:13-41
+activity#com.example.mykotlinapp.shepherdStory
 ADDED from C:\Users\Ken\AndroidStudioProjects\Skripsi\MyKotlinApp\app\src\main\AndroidManifest.xml:53:9-55:39
 	android:exported
 		ADDED from C:\Users\Ken\AndroidStudioProjects\Skripsi\MyKotlinApp\app\src\main\AndroidManifest.xml:55:13-36
 	android:name
-		ADDED from C:\Users\Ken\AndroidStudioProjects\Skripsi\MyKotlinApp\app\src\main\AndroidManifest.xml:54:13-41
-activity#com.example.mykotlinapp.shepherdStory
+		ADDED from C:\Users\Ken\AndroidStudioProjects\Skripsi\MyKotlinApp\app\src\main\AndroidManifest.xml:54:13-42
+activity#com.example.mykotlinapp.wrongAnswer
 ADDED from C:\Users\Ken\AndroidStudioProjects\Skripsi\MyKotlinApp\app\src\main\AndroidManifest.xml:56:9-58:39
 	android:exported
 		ADDED from C:\Users\Ken\AndroidStudioProjects\Skripsi\MyKotlinApp\app\src\main\AndroidManifest.xml:58:13-36
 	android:name
-		ADDED from C:\Users\Ken\AndroidStudioProjects\Skripsi\MyKotlinApp\app\src\main\AndroidManifest.xml:57:13-42
-activity#com.example.mykotlinapp.wrongAnswer
+		ADDED from C:\Users\Ken\AndroidStudioProjects\Skripsi\MyKotlinApp\app\src\main\AndroidManifest.xml:57:13-40
+activity#com.example.mykotlinapp.bawangMerah
 ADDED from C:\Users\Ken\AndroidStudioProjects\Skripsi\MyKotlinApp\app\src\main\AndroidManifest.xml:59:9-61:39
 	android:exported
 		ADDED from C:\Users\Ken\AndroidStudioProjects\Skripsi\MyKotlinApp\app\src\main\AndroidManifest.xml:61:13-36
 	android:name
 		ADDED from C:\Users\Ken\AndroidStudioProjects\Skripsi\MyKotlinApp\app\src\main\AndroidManifest.xml:60:13-40
-activity#com.example.mykotlinapp.bawangMerah
+activity#com.example.mykotlinapp.bawangMerahEasy
 ADDED from C:\Users\Ken\AndroidStudioProjects\Skripsi\MyKotlinApp\app\src\main\AndroidManifest.xml:62:9-64:39
 	android:exported
 		ADDED from C:\Users\Ken\AndroidStudioProjects\Skripsi\MyKotlinApp\app\src\main\AndroidManifest.xml:64:13-36
 	android:name
-		ADDED from C:\Users\Ken\AndroidStudioProjects\Skripsi\MyKotlinApp\app\src\main\AndroidManifest.xml:63:13-40
-activity#com.example.mykotlinapp.bawangMerahEasy
+		ADDED from C:\Users\Ken\AndroidStudioProjects\Skripsi\MyKotlinApp\app\src\main\AndroidManifest.xml:63:13-44
+activity#com.example.mykotlinapp.malinKundangEasy
 ADDED from C:\Users\Ken\AndroidStudioProjects\Skripsi\MyKotlinApp\app\src\main\AndroidManifest.xml:65:9-67:39
 	android:exported
 		ADDED from C:\Users\Ken\AndroidStudioProjects\Skripsi\MyKotlinApp\app\src\main\AndroidManifest.xml:67:13-36
 	android:name
-		ADDED from C:\Users\Ken\AndroidStudioProjects\Skripsi\MyKotlinApp\app\src\main\AndroidManifest.xml:66:13-44
-activity#com.example.mykotlinapp.malinKundangEasy
+		ADDED from C:\Users\Ken\AndroidStudioProjects\Skripsi\MyKotlinApp\app\src\main\AndroidManifest.xml:66:13-45
+activity#com.example.mykotlinapp.easyQuiz
 ADDED from C:\Users\Ken\AndroidStudioProjects\Skripsi\MyKotlinApp\app\src\main\AndroidManifest.xml:68:9-70:39
 	android:exported
 		ADDED from C:\Users\Ken\AndroidStudioProjects\Skripsi\MyKotlinApp\app\src\main\AndroidManifest.xml:70:13-36
 	android:name
-		ADDED from C:\Users\Ken\AndroidStudioProjects\Skripsi\MyKotlinApp\app\src\main\AndroidManifest.xml:69:13-45
-activity#com.example.mykotlinapp.easyQuiz
-ADDED from C:\Users\Ken\AndroidStudioProjects\Skripsi\MyKotlinApp\app\src\main\AndroidManifest.xml:71:9-73:39
-	android:exported
-		ADDED from C:\Users\Ken\AndroidStudioProjects\Skripsi\MyKotlinApp\app\src\main\AndroidManifest.xml:73:13-36
-	android:name
-		ADDED from C:\Users\Ken\AndroidStudioProjects\Skripsi\MyKotlinApp\app\src\main\AndroidManifest.xml:72:13-37
+		ADDED from C:\Users\Ken\AndroidStudioProjects\Skripsi\MyKotlinApp\app\src\main\AndroidManifest.xml:69:13-37
 uses-sdk
 INJECTED from C:\Users\Ken\AndroidStudioProjects\Skripsi\MyKotlinApp\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\Ken\AndroidStudioProjects\Skripsi\MyKotlinApp\app\src\main\AndroidManifest.xml

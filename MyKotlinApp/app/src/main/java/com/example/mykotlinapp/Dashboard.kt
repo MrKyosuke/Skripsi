@@ -13,17 +13,12 @@ class Dashboard : AppCompatActivity(), View.OnClickListener {
 
         // Initialize CardViews
         val dashboardCard: CardView = findViewById(R.id.cardView1)
-        val settingsCard: CardView = findViewById(R.id.cardView2)
-        val aboutCard: CardView = findViewById(R.id.cardView3)
+        val aboutCard: CardView = findViewById(R.id.cardView2)
+
 
         // Set onClickListeners
         dashboardCard.setOnClickListener {
             val intent = Intent(this, Level::class.java)
-            startActivity(intent)
-        }
-
-        settingsCard.setOnClickListener {
-            val intent = Intent(this, Settings::class.java)
             startActivity(intent)
         }
 

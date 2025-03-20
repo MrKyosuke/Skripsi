@@ -3153,6 +3153,7 @@ drawable the_punishment
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
 drawable treasure
+drawable try_again
 drawable turtle_rabbit
 drawable village_scene
 id ALT
@@ -3287,7 +3288,6 @@ id callMeasure
 id cancel_button
 id cardView1
 id cardView2
-id cardView3
 id card_easy
 id card_hard
 id card_medium
